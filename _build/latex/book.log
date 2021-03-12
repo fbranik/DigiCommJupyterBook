@@ -1,6 +1,7 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.6.8)  11 MAR 2021 20:16
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.6.8)  12 MAR 2021 14:15
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **book.tex
 (./book.tex
@@ -939,21 +940,169 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ]
-(./book.toc
-LaTeX Info: Redefining \rmfamily on input line 1.
-LaTeX Info: Redefining \sffamily on input line 1.
-LaTeX Info: Redefining \ttfamily on input line 1.
-)
-\tf@toc=\write6
-\openout6 = `book.toc'.
+[3] [4] [5]
+File: 1_1.png Graphic file (type bmp)
+<1_1.png>
 
- [1
+Underfull \hbox (badness 10000) in paragraph at lines 353--357
+\TU/FreeSerif(0)/m/n/10 Τα πρωτογενή σήματα είναι κυρίως αναλογικά (συνεχούς χρ
+όνου). Για να τα παραστήσουμε
+ []
 
-] [2
 
-]
-Chapter 1.
-(./book.ind)
+Underfull \hbox (badness 10000) in paragraph at lines 353--357
+\TU/FreeSerif(0)/m/n/10 και επεξεργαστούμε στον υπολογιστή μας (ή άλλη ψηφιακή 
+μηχανή) θα πρέπει πρώτα
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--357
+\TU/FreeSerif(0)/m/n/10 να τα ψηφιοποιήσουμε. Υποθέστε ένα σήμα συνεχούς χρόνου
+ $\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )$ \TU/F
+reeSerif(0)/m/n/10 με μετασχηματισμό
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--357
+\TU/FreeSerif(0)/m/n/10 Fourier (Continuous Time Fourier Transform – CTFT): $\O
+ML/cmm/m/it/10 X\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ) = [][] \OM
+L/cmm/m/it/10 x\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )\OML/cmm/m/i
+t/10 e[]dt$
+ []
+
+[6]
+File: 1.2.png Graphic file (type bmp)
+<1.2.png>
+File: 1.4.png Graphic file (type bmp)
+<1.4.png>
+Missing character: There is no Τ in font cmmi10!
+Missing character: There is no ο in font cmmi7!
+Missing character: There is no Τ in font cmmi10!
+ [7]
+Missing character: There is no Ν in font cmmi10!
+Missing character: There is no Ν in font cmmi10!
+Missing character: There is no Ν in font cmmi10!
+Missing character: There is no Ν in font cmmi10!
+Missing character: There is no Ν in font cmmi10!
+Missing character: There is no Ν in font cmmi10!
+Missing character: There is no Ν in font cmmi10!
+File: 1.4.png Graphic file (type bmp)
+<1.4.png>
+Missing character: There is no Χ in font cmmi7!
+ [8]
+Missing character: There is no Χ in font cmmi7!
+Missing character: There is no Ν in font cmmi10!
+Missing character: There is no Ν in font cmmi10!
+ [9]
+Underfull \vbox (badness 10000) detected at line 593
+ []
+
+
+Overfull \vbox (2.78596pt too high) detected at line 593
+ []
+
+[10]
+File: Exercise1_3_2_0.png Graphic file (type bmp)
+<Exercise1_3_2_0.png>
+File: Exercise1_3_2_1.png Graphic file (type bmp)
+<Exercise1_3_2_1.png>
+ [11]
+File: Exercise1_3_2_2.png Graphic file (type bmp)
+<Exercise1_3_2_2.png>
+File: Exercise1_3_2_3.png Graphic file (type bmp)
+<Exercise1_3_2_3.png>
+ [12]
+Underfull \vbox (badness 10000) detected at line 668
+ []
+
+[13]
+File: Exercise1_3_3_0.png Graphic file (type bmp)
+<Exercise1_3_3_0.png>
+ [14]
+File: Exercise1_3_3_1.png Graphic file (type bmp)
+<Exercise1_3_3_1.png>
+File: Exercise1_3_3_2.png Graphic file (type bmp)
+<Exercise1_3_3_2.png>
+ [15]
+File: Exercise1_3_3_3.png Graphic file (type bmp)
+<Exercise1_3_3_3.png>
+ [16]
+File: Exercise1_3_4_0.png Graphic file (type bmp)
+<Exercise1_3_4_0.png>
+ [17]
+File: Exercise1_3_4_1.png Graphic file (type bmp)
+<Exercise1_3_4_1.png>
+ [18] [19]
+File: Exercise1_4_7_0.png Graphic file (type bmp)
+<Exercise1_4_7_0.png>
+File: Exercise1_4_7_1.png Graphic file (type bmp)
+<Exercise1_4_7_1.png>
+ [20]
+File: Exercise2_1_6_0.png Graphic file (type bmp)
+<Exercise2_1_6_0.png>
+ [21]
+File: Exercise2_1_10_1.png Graphic file (type bmp)
+<Exercise2_1_10_1.png>
+ [22]
+File: Exercise2_1_15_0.png Graphic file (type bmp)
+<Exercise2_1_15_0.png>
+ [23]
+File: Exercise2_1_18_0.png Graphic file (type bmp)
+<Exercise2_1_18_0.png>
+ [24]
+File: Exercise2_1_19_0.png Graphic file (type bmp)
+<Exercise2_1_19_0.png>
+ [25]
+File: Exercise2_1_22_0.png Graphic file (type bmp)
+<Exercise2_1_22_0.png>
+File: Exercise2_1_24_0.png Graphic file (type bmp)
+<Exercise2_1_24_0.png>
+ [26]
+File: Exercise2_1_25_0.png Graphic file (type bmp)
+<Exercise2_1_25_0.png>
+ [27]
+File: Exercise2_1_25_1.png Graphic file (type bmp)
+<Exercise2_1_25_1.png>
+
+[28]
+File: Exercise2_1_27_0.png Graphic file (type bmp)
+<Exercise2_1_27_0.png>
+ [29]
+File: Exercise2_1_29_0.png Graphic file (type bmp)
+<Exercise2_1_29_0.png>
+
+Overfull \vbox (2.50853pt too high) detected at line 1087
+ []
+
+[30]
+File: Exercise2_1_31_0.png Graphic file (type bmp)
+<Exercise2_1_31_0.png>
+ [31]
+File: Exercise2_1_35_0.png Graphic file (type bmp)
+<Exercise2_1_35_0.png>
+File: Exercise2_1_37_0.png Graphic file (type bmp)
+<Exercise2_1_37_0.png>
+ [32] [33]
+File: Exercise2_1_41_0.png Graphic file (type bmp)
+<Exercise2_1_41_0.png>
+File: Exercise2_1_41_1.png Graphic file (type bmp)
+<Exercise2_1_41_1.png>
+ [34]
+File: Exercise2_1_43_0.png Graphic file (type bmp)
+<Exercise2_1_43_0.png>
+ [35]
+File: Exercise2_1_45_0.png Graphic file (type bmp)
+<Exercise2_1_45_0.png>
+ [36] [37]
+File: Exercise2_2_8_0.png Graphic file (type bmp)
+<Exercise2_2_8_0.png>
+ [38]
+File: Exercise2_2_10_0.png Graphic file (type bmp)
+<Exercise2_2_10_0.png>
+ [39]
+File: Exercise2_2_12_0.png Graphic file (type bmp)
+<Exercise2_2_12_0.png>
+ [40] (./book.ind)
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -988,28 +1137,32 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 106.
- [1
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1413.
+ [41]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1413.
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 106.
- (./book.aux
+(./book.aux
 LaTeX Info: Redefining \rmfamily on input line 19.
 LaTeX Info: Redefining \sffamily on input line 19.
 LaTeX Info: Redefining \ttfamily on input line 19.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 106.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 106.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1413.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1413.
+
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 00AC2EEB8E710528454D5E9C7E6653B2;258.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 16544 strings out of 479418
- 306441 string characters out of 5884586
- 636301 words of memory out of 5000000
- 33749 multiletter control sequences out of 15000+600000
- 536469 words of font info for 73 fonts, out of 8000000 for 9000
+ 16836 strings out of 479418
+ 312524 string characters out of 5884586
+ 701301 words of memory out of 5000000
+ 33991 multiletter control sequences out of 15000+600000
+ 537840 words of font info for 89 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
- 44i,11n,82p,820b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,16n,82p,857b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on book.pdf (5 pages).
+Output written on book.pdf (41 pages).

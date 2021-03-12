@@ -2,4 +2,17 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
 - file: intro
-#- file:
+- file: Exercise1_0
+  chapters:
+  - file: Exercise1_1
+    title: Μέρος 1 Εξάσκηση
+  - file: Exercise1_2
+    title: Μέρος 2  Δειγματοληψία - Ψηφιοποίηση
+  - file: Exercise1_3
+    title: Μέρος 3 Εφαρμογή Α
+  - file: Exercise1_4
+    title: Μέρος 4 Εφαρμογή B
+- file: Exercise2_0
+  chapters:
+  - file: Exercise2_1
+  - file: Exercise2_2

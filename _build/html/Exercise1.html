@@ -1,0 +1,1111 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Άσκηση 1η &#8212; Μία Πρώτη Προσέγγιση</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Μία Πρώτη Προσέγγιση</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Εισαγωγή
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="Exercise1_0.html">
+   Άσκηση 1η
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise1_1.html">
+     Μέρος 1 Εξάσκηση
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise1_2.html">
+     Μέρος 2  Δειγματοληψία - Ψηφιοποίηση
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise1_3.html">
+     Μέρος 3 Εφαρμογή Α
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise1_4.html">
+     Μέρος 4 Εφαρμογή B
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="Exercise2_0.html">
+   Άσκηση 2η
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_1.html">
+     <em>
+      Μέρος 1: Σχεδιασμός και υλοποίηση φίλτρων
+     </em>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_1.html#sonar">
+     Σήμα sonar
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_1.html#id4">
+     Σήμα βιολιού
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_1.html#id6">
+     Βαθυπερατά φίλτρα
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_1.html#id10">
+     Ζωνοπερατά φίλτρα
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_1.html#hz-950-hz-3000-hz-3500-hz">
+     Ζωνοπερατό φίλτρο με ζώνες διέλευσης (750 Hz, 950 Hz) και (3000 Hz, 3500 Hz)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_2.html">
+     Μέρος 2 Ζωνοπερατό φίλτρο
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_2.html#sonar">
+     Σήμα sonar
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_2.html#id2">
+     Ζωνοπερατό φίλτρο με ζώνες διέλευσης (750 Hz, 950 Hz) και (3000 Hz, 3500 Hz)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Exercise1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Exercise1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   Μέρος 1: Εξοικείωση με το προγραμματιστικό περιβάλλον της Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-notebook">
+     Jupyter notebook
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Εξάσκηση
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Μέρος 2:  Δειγματοληψία - Ψηφιοποίηση
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Φασματική Ανάλυση
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   Μέρος 3:  Εφαρμογή Α
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   Μέρος 4:  Εφαρμογή Β
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>Άσκηση 1η<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Σκοπός της πρώτης σειράς ασκήσεων είναι, αφ’ ενός η εξοικείωση με το προγραμματιστικό περιβάλλον της Python, αφ’ ετέρου, η εισαγωγή στους τρόπους παράστασης και επεξεργασίας τηλεπικοινωνιακών σημάτων στη συγκεκριμένη γλώσσα προγραμματισμού.</p>
+<div class="section" id="python">
+<h2>Μέρος 1: Εξοικείωση με το προγραμματιστικό περιβάλλον της Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>… (Λίγα λόγια για τον interactive python interpreter [ipython] και το jupyter notebook)</p>
+<div class="section" id="jupyter-notebook">
+<h3>Jupyter notebook<a class="headerlink" href="#jupyter-notebook" title="Permalink to this headline">¶</a></h3>
+<p>To Project Jupyter είναι ένας μη κερδοσκοπικός οργανισμός με αποστολή τη συγγραφή ανοικτού λογισμικού για διαδραστικές εφαρμογές. Ξεκίνησε από ipython, ωστόσο σήμερα προσφέρει προγράμματα σε πολλές γλώσσες προγραμματισμού.</p>
+<p>Το jupyter notebook (<a class="reference external" href="https://jupyter.org/">https://jupyter.org/</a>) είναι μια πλατφόρμα web ανοικτού λογισμικού για την ανάπτυξη διαδραστικών εφαρμογών, κυρίως για επεξεργασία (επιστημονικών) δεδομένων και μηχανικής μάθησης.</p>
+</div>
+<div class="section" id="id2">
+<h3>Εξάσκηση<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">signal</span>
+<span class="c1"># Ανατρέξτε στην τεκμηρίωση της βιβλιοθήκης scipy.signal</span>
+<span class="c1"># https://docs.scipy.org/doc/scipy/reference/signal.html</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">random</span>
+<span class="c1"># Δείτε την έκδοση της αριθμητικής βιβλιοθήκης numpy</span>
+<span class="n">np</span><span class="o">.</span><span class="n">__version__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.20.1&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Μην ξεχνάτε ότι η IPython μας δίνει τη δυνατότητα να ‘εξερευνήσουμε’ το περιεχόμενο ενός package, χρησιμοποιώντας τη δυνατότητα του tab-completion, ή τη χρήση του ? για help/documentation:
+Π.χ., για να δούμε όλα τα περιεχόμενα του signal namespace δίνουμε:</p>
+<p>In [3]: signal?</p>
+<p>και για να καλέσουμε την ενσωμετωμένη τεκμηρίωση της numpy, δίνουμε:</p>
+<p>In [4]: np?</p>
+<p>Περισσότερες πληροφορίες μπορείτε να πάρετε από το <a class="reference external" href="http://www.numpy.org">http://www.numpy.org</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Δημιουργήστε ένα βαθμωτό (μονοδιάστατο) μέγεθος</span>
+
+<span class="n">s</span><span class="o">=</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;s =&#39;</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>s = 2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Δημιουργείστε ένα διάνυσμα πραγματικών τιμών:</span>
+<span class="c1"># Στο MATLAB: v = [1,5,9] ή v = [1 5 9]</span>
+
+<span class="n">v</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;v =&#39;</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>v = [1 5 9]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Πρόσβαση στα στοιχεία ενός numpy array</span>
+<span class="c1"># το πρώτο στοιχείο ξεκινάει στο 0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># υπάρχει και η δυνατότητα πρόσβασης στοιχείων από το τέλος με αρνητικούς δείκτες</span>
+<span class="c1"># το τελευταίο στοιχείο έχει δείκτη -1 το προτελευταλιο -2 κ.ο.κ.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 5
+9 5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Τα numpy arrays προσφέρουν και δυνατότητες τεμαχισμού (slicing)</span>
+<span class="c1"># το απλό slicing u[start:end] ξεκινάει από το στοιχείο</span>
+<span class="c1"># στη θέση start και φτάνει στη θέση end (χωρίς να την περιέχει)</span>
+<span class="c1"># αν η αρχή ή το τέλος παραληφθεί, αυτά λαμβάνονται η αρχή ή το τέλος του πίνακα</span>
+<span class="c1"># επίσης μπορεί να χρησιμοποιηθεί και βήμα με την μορφή u[start:end:step]</span>
+
+<span class="n">u</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 5 9]
+[9 7 3 2]
+[5 9 7 3]
+[1 9 3]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Προσσοχή, όταν θέλουμε να εξάγουμε από έναν πίνακα ένα συγκερκιμένο τεμάχιο</span>
+<span class="c1"># όπως παρακάτω, τα δύο numpy arrays είναι σενδεδεμένα, δηλ. ο,τι αλλάζει στο ένα</span>
+<span class="c1"># αλλάζει και στο άλλο</span>
+<span class="n">u_slice1</span> <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;τεμάχιο:                       &quot;</span><span class="p">,</span> <span class="n">u_slice1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;αρχικός πίνακας:               &quot;</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span>
+<span class="n">u_slice1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;τεμάχιο μετά από αλλαγή:       &quot;</span><span class="p">,</span> <span class="n">u_slice1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;αρχικός πίνακα μετά από αλλαγή:&quot;</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span>
+
+<span class="c1"># Όποτε θέλουμε να το αποφύγουμε αυτό χρησιμοποιούμε το .copy()</span>
+<span class="n">u_slice2</span> <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">u_slice2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">τεμάχιο με .copy() μετά από αλλαγή:       &quot;</span><span class="p">,</span> <span class="n">u_slice2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;αρχικός πίνακα μετά από αλλαγή με .copy():&quot;</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>τεμάχιο:                        [9 7 3]
+αρχικός πίνακας:                [1 5 9 7 3 2]
+τεμάχιο μετά από αλλαγή:        [8 7 3]
+αρχικός πίνακα μετά από αλλαγή: [1 5 8 7 3 2]
+
+τεμάχιο με .copy() μετά από αλλαγή:        [9 7 3]
+αρχικός πίνακα μετά από αλλαγή με .copy(): [1 5 8 7 3 2]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Δημιουργείστε έναν πίνακα πραγματικών τιμών:</span>
+<span class="c1"># Στο MATLAB: a = a=[[1,2,3];[4,5,6];[7,8,9]] ή a=[1,2,3;4,5,6;7,8,9]</span>
+<span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a = [[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Αθροίστε</span>
+
+<span class="n">a</span><span class="o">+</span><span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 6,  7,  8],
+       [ 9, 10, 11],
+       [12, 13, 14]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Πολλαπλασιάστε</span>
+
+<span class="n">b</span><span class="o">=</span><span class="n">s</span><span class="o">*</span><span class="n">v</span><span class="o">*</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b =&#39;</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b = [ 4 20 36]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Πολλαπλασιάστε στοιχείο-προς-στοιχείο (elementwise)</span>
+<span class="c1"># MATLAB: v.*b</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([  4, 100, 324])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Ελέγξτε το μήκος ενός διανύσματος</span>
+<span class="c1"># MATLAB: length(v)</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ελέγξτε το μέγεθος ενός πίνακα</span>
+<span class="c1"># MATLAB: size(a)</span>
+
+<span class="n">a</span><span class="o">.</span><span class="n">shape</span>   <span class="c1"># για array: np.array(a.shape)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Προσπελάστε συγκεκριμένα στοιχεία ενός πίνακα</span>
+<span class="c1"># Η δεικτοδότηση αρχίζει από το 0. </span>
+<span class="c1"># MATLAB: a(1,2)  </span>
+<span class="c1"># --- ΠΡΟΣΟΧΗ, στο MATLAB η δεικτοδ΄ότηση αρχ΄ίζει από το 1!</span>
+
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Προσπελάστε συγκεκριμένα στοιχεία ενός πίνακα (συνέχεια)</span>
+<span class="c1"># Αρνητικές τιμές μετρούν από το τέλος, π.χ. το -1 </span>
+<span class="c1"># αναφέρεται στο τελευταίο στοιχείο)</span>
+
+<span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Προσπελάστε συγκεκριμένο τμήμα ενός διανύσματος</span>
+<span class="c1"># MATLAB: v(1:9)</span>
+
+<span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="c1"># ΠΡΟΣΟΧΗ: τα στοιχεία [2ο,3ο] δίνονται ως 1:3 και όχι ως 1:2</span>
+<span class="c1"># Δοκιμάστε το v[1:2]...</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 9])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Προσπελάστε συγκεκριμένα τμήματα ενός πίνακα</span>
+
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,:]</span>
+
+<span class="c1"># Ομοίως: οι γραμμές 1 &amp; 2 δίνονται ως 0:2 και όχι ως 0:1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 2, 3],
+       [4, 5, 6]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Δημιουργήστε ένα διάνυσμα με στοιχεία από το 0 έως το 0.5 και βήμα 0.1</span>
+<span class="c1"># MATLAB: t=(0:0.1:0.4)</span>
+
+<span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t=&#39;</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t= [0.  0.1 0.2 0.3 0.4]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Μέρος 2:  Δειγματοληψία - Ψηφιοποίηση<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Τα πρωτογενή σήματα είναι κυρίως αναλογικά (συνεχούς χρόνου). Για να τα παραστήσουμε και επεξεργαστούμε στον υπολογιστή μας (ή άλλη ψηφιακή μηχανή) θα πρέπει πρώτα να τα ψηφιοποιήσουμε. Υποθέστε ένα σήμα συνεχούς χρόνου <span class="math notranslate nohighlight">\(x(t)\)</span> με μετασχηματισμό Fourier (Continuous Time Fourier Transform – CTFT):
+<span class="math notranslate nohighlight">\(X(f)=\int_{-\infty}^{\infty} x(t)e^{-j2\pi ft} dt\)</span>
+<img alt="1.1" src="_images/1_1.png" /></p>
+<p>Λαμβάνοντας δείγματα του <span class="math notranslate nohighlight">\(x(t)\)</span> με ρυθμό <span class="math notranslate nohighlight">\(f_s=1/T_s\)</span> παράγεται σήμα διακριτού χρόνου <span class="math notranslate nohighlight">\(x(nT_s)\)</span>. Μαθηματικά το αναπαριστάνουμε ως σειρά συναρτήσεων δέλτα</p>
+<div class="math notranslate nohighlight">
+\[x_\delta (t)=\sum_{n=-\infty}^{\infty}x(nT_s)\delta(t-nT_s)=x(t\sum_{n=-\infty}^{\infty}\delta(t-nT_s)\]</div>
+<p>με μετασχηματισμό Fourier</p>
+<div class="math notranslate nohighlight">
+\[X_\delta (f)=\sum_{n=-\infty}^{\infty}x(nT_s)e^{-j2\pi fnT_s}=X(f)*1/T_s\sum_{n=-\infty}^{\infty}\delta(f-k/T_s)=1/T_s\sum_{n=-\infty}^{\infty}X(f-k/T_s)\]</div>
+<p>που είναι περιοδική συνάρτηση.
+<img alt="1.2" src="_images/1.2.png" /></p>
+<p>Για βαθυπερατά σήματα <span class="math notranslate nohighlight">\(x(t)\)</span> εύρους ζώνης W, με την υπόθεση ότι ο ρυθμός δειγματοληψίας <span class="math notranslate nohighlight">\(fs ≥
+2W\)</span>, ισχύει ότι <span class="math notranslate nohighlight">\(X(f) = T_s X_\delta(f)\)</span>, <span class="math notranslate nohighlight">\(0 ≤ f ≤ W\)</span>, δηλαδή, το σήμα <span class="math notranslate nohighlight">\(X(f)\)</span> προκύπτει μετά από διάβαση του
+δειγματοληπτημένου <span class="math notranslate nohighlight">\(x_\delta(t)\)</span> μέσω ιδανικού βαθυπερατού φίλτρου κέρδους <span class="math notranslate nohighlight">\(T_s\)</span>. Από το προηγούμενο
+σχήμα γίνεται φανερό ότι εάν η δειγματοληψία γίνει με συχνότητα μικρότερη του διπλασίου της
+ανώτερης συχνότητας <span class="math notranslate nohighlight">\(W\)</span> του σήματος (υποδειγμάτιση – undersampling), τότε εμφανίζονται στην
+περιοχή συχνοτήτων του σήματος «είδωλα» φάσματος από ανώτερες συχνότητες που δεν
+επιτρέπουν την ακριβή αποκατάσταση του αρχικού σήματος συνεχούς χρόνου. Το φαινόμενο αυτό
+ονομάζεται <strong>αναδίπλωση</strong> ή <strong>επικάλυψη</strong> (aliasing), το δε σφάλμα κατά την αποκατάσταση του
+αρχικού σήματος αποκαλείται σφάλμα αναδίπλωσης (aliasing error).
+Η δειγματοληψία στο πεδίο του χρόνου αποτελεί τη βάση για τον ορισμό του μετασχηματισμού
+Fourier διακριτού χρόνου (Discrete Time Fourier Transform – DTFT). Για μια σειρά διακριτών
+αριθμών <span class="math notranslate nohighlight">\(x[n]\)</span>, ο μετασχηματισμός Fourier διακριτού χρόνου ορίζεται ως:
+<span class="math notranslate nohighlight">\(X_\delta (\phi)\triangleq\sum_{n=-\infty}^{\infty}x[n]e^{-j2\pi n\phi}\)</span></p>
+<p>O DTFT είναι περιοδική συνάρτηση με περίοδο <span class="math notranslate nohighlight">\(1\)</span>, επομένως, αρκεί ο υπολογισμός του στο
+διάστημα συχνοτήτων <span class="math notranslate nohighlight">\([0,1]\)</span> ή ισοδύναμα <span class="math notranslate nohighlight">\([-½,½]\)</span>. Να σημειωθεί ότι ο DTFT, παρότι προκύπτει από
+μια σειρά διακριτών αριθμών <span class="math notranslate nohighlight">\(x[n]\)</span>, είναι συνεχής συνάρτηση της μεταβλητής <span class="math notranslate nohighlight">\(\phi\)</span> όπως παραστατικά
+φαίνεται στο επόμενο σχήμα.
+<img alt="1.4" src="_images/1.4.png" /></p>
+<p>Με τη σειρά των διακριτών αριθμών να προκύπτει ως αποτέλεσμα δειγματοληψίας, <span class="math notranslate nohighlight">\(x[n]=x(nT_s)\)</span>, ο
+DTFT και ο μετασχηματισμός Fourier <span class="math notranslate nohighlight">\(X_\delta(f)\)</span> του δειγματοληπτημένου σήματος συνδέονται μέσω
+της αντιστοιχίας <span class="math notranslate nohighlight">\(\phi ↔ f/f_s\)</span>. Η συνήθης πρακτική είναι να παριστάνουμε τον λόγο <span class="math notranslate nohighlight">\(f/f_s\)</span> ως
+κανονικοποιημένη συχνότητα <span class="math notranslate nohighlight">\(\phi\)</span> (<span class="math notranslate nohighlight">\(f_D\)</span>, στις σημειώσεις σας) και οι πραγματικές συχνότητες να
+προκύπτουν ως πολλαπλάσιά της (συνήθως κλασματικά). Για τη σύνδεση του DTFT με τον μετασχηματισμό Fourier <span class="math notranslate nohighlight">\(X(f)\)</span> του σήματος πρέπει επιπλέον να γίνει αναγωγή στην περίοδο δειγματοληψίας με πολλαπλασιασμό επί <span class="math notranslate nohighlight">\(T_s\)</span> (ή διαίρεση με <span class="math notranslate nohighlight">\(f_s\)</span>).
+Κατ΄ αναλογία με τη δειγματοληψία σημάτων στο χρόνο μπορούμε να κάνουμε δειγματοληψία στο
+πεδίο της συχνότητας λαμβάνοντας διακριτές τιμές <span class="math notranslate nohighlight">\(X(kf_o)\)</span> του μετασχηματισμού Fourier που
+αντιστοιχούν σε ανάλυση συχνότητας <span class="math notranslate nohighlight">\(f_o=1/T_o\)</span>. Αυτό ισοδυναμεί με περιοδική επανάληψη του
+σήματος συνεχούς χρόνου <span class="math notranslate nohighlight">\(x(t)\)</span> κάθε <span class="math notranslate nohighlight">\(Τ_ο\)</span>, αφού το περιοδικό σήμα
+<span class="math notranslate nohighlight">\(x_p (t)=\sum_{n=-\infty}^{\infty}x(t-nT_o)\)</span></p>
+<p>έχει μετασχηματισμό Fourier</p>
+<div class="math notranslate nohighlight">
+\[X(f)\sum_{n=-\infty}^{\infty}e^{-j2\pi f n T_o}= X(f)\frac{1}{T_o}\sum_{k=-\infty}^{\infty}\delta(f-\frac{k}{T_o})=\frac{1}{T_o}\sum_{k=-\infty}^{\infty}X(\frac{k}{T_o})\delta(f-\frac{k}{T_o})\]</div>
+<p>Επομένως, <span class="math notranslate nohighlight">\(X[k] = X(kf_o)/Τ_o\)</span> είναι οι συντελεστές του αναπτύγματος σε σειρά Fourier.του περιοδικού
+σήματος <span class="math notranslate nohighlight">\(x_p(t)\)</span>. Προφανώς, για σήματα <span class="math notranslate nohighlight">\(x(t)\)</span> πεπερασμένης διάρκειας, όπου <span class="math notranslate nohighlight">\(x(t)=0\)</span> για <span class="math notranslate nohighlight">\(|t| ≥ T\)</span>, με την
+υπόθεση ότι η περίοδος <span class="math notranslate nohighlight">\(T_o ≥ 2T\)</span>, ισχύει ότι <span class="math notranslate nohighlight">\(x(t) = x_p(t)\)</span> για <span class="math notranslate nohighlight">\(|t| ≤ T\)</span>.
+Στην πράξη, τα σήματα έχουν πολύ μεγάλη διάρκεια για να μπορέσουμε να τα αναλύσουμε στην
+ολότητά τους. Έτσι εφαρμόζουμε ένα ορθογωνικό χρονικό παράθυρο, ώστε να διατηρήσουμε μόνο
+το πιο σημαντικό τους μέρος για το διάστημα παρατήρησης και <span class="math notranslate nohighlight">\(x(t)= 0\)</span>, αλλού. Κατά τον
+υπολογισμό του DTFT <span class="math notranslate nohighlight">\(X_d(\phi)\)</span> ενός τέτοιου ακρωτηριασμένου σήματος, αντί του απείρου
+αθροίσματος, περιοριζόμαστε σε μια πεπερασμένου μήκους <span class="math notranslate nohighlight">\(L\)</span> σειρά αριθμών <span class="math notranslate nohighlight">\(x[n]\)</span>, οπότε</p>
+<div class="math notranslate nohighlight">
+\[X_d (\phi)=\sum_{n=0}^{L-1}x[n]e^{-j2\pi n\phi}\]</div>
+<p>H δειγματοληψία του <span class="math notranslate nohighlight">\(X_d(\phi)\)</span> στο πεδίο συχνότητας σε <span class="math notranslate nohighlight">\(Ν\)</span> ισαπέχουσες κανονικοποιημένες συχνότητες <span class="math notranslate nohighlight">\(0\)</span>, <span class="math notranslate nohighlight">\(1/Ν\)</span>, <span class="math notranslate nohighlight">\(2/Ν\)</span>, <span class="math notranslate nohighlight">\(…\)</span>, <span class="math notranslate nohighlight">\((Ν-1)/Ν\)</span>, δίνει</p>
+<div class="math notranslate nohighlight">
+\[X[k]=X_d (\frac{k}{N})=\sum_{n=0}^{N-1}x[n]e^{-j2\pi n\frac{k}{N}}, 0\leq k \leq N-1\]</div>
+<p>όπου, εάν <span class="math notranslate nohighlight">\(N≥L\)</span>, θέτουμε <span class="math notranslate nohighlight">\(x[n]=0\)</span> για <span class="math notranslate nohighlight">\(n≥L\)</span>. Η τελευταία σχέση αναγνωρίζεται ως ο διακριτός μετασχηματισμός Fourier (Discrete Fourier Transform – DFT), ο οποίος για μια πεπερασμένη σειρά <span class="math notranslate nohighlight">\(xn\)</span>, <span class="math notranslate nohighlight">\(n=0\)</span>, <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(…\)</span>, <span class="math notranslate nohighlight">\(N-1\)</span>, ορίζεται ως:</p>
+<div class="math notranslate nohighlight">
+\[X_k\triangleq \sum_{n=0}^{N-1}x_n e^{-j2\pi n\frac{k}{N}}, 0\leq k \leq N-1\]</div>
+<p>και ο αντίστροφός του είναι</p>
+<div class="math notranslate nohighlight">
+\[x_n= \frac{1}{N} \sum_{k=0}^{N-1}X_k e^{-j2\pi n\frac{k}{N}}, 0\leq n \leq N-1\]</div>
+<p>Η <span class="math notranslate nohighlight">\(X_d(\phi)\)</span> ως DTFT είναι περιοδική συνάρτηση και εάν η αρχική σειρά xn ήταν περιοδική (και δεν
+εφαρμόζαμε το παράθυρο), τότε η <span class="math notranslate nohighlight">\(X_d(\phi)\)</span> θα ήταν μηδέν παντού εκτός των σημείων της
+δειγματοληψίας <span class="math notranslate nohighlight">\(k/Ν\)</span>. Δηλαδή, εάν θεωρήσουμε μια πεπερασμένου μήκους σειρά αριθμών που
+επαναλαμβάνεται περιοδικά, o διακριτού χρόνου μετασχηματισμός Fourier της (DTFT) είναι και
+αυτός περιοδικός και διακριτός. Επιπλέον, ο DFT και ο αντίστροφός του IDFT, εάν δεν
+περιορίζαμε τους δείκτες <span class="math notranslate nohighlight">\(n\)</span> και <span class="math notranslate nohighlight">\(k\)</span> μεταξύ <span class="math notranslate nohighlight">\(0\)</span> και <span class="math notranslate nohighlight">\(N-1\)</span>, θα ήταν περιοδικές συναρτήσεις. Άρα η
+πεπερασμένη σειρά xn μπορεί να θεωρηθεί ως ένα περιοδικό σήμα διακριτού χρόνου ιδωμένο μόνο
+κατά τη διάρκεια μιας περιόδου και ο DFT, η σειρά <span class="math notranslate nohighlight">\(X_k\)</span>, ως τα δείγματα με ανάλυση <span class="math notranslate nohighlight">\(1/Ν\)</span> του DTFT
+<span class="math notranslate nohighlight">\(X_d(\phi)\)</span> στο πεδίο κανονικοποιημένων συχνοτήτων <span class="math notranslate nohighlight">\([0,1]\)</span>, όπως φαίνεται στο επόμενο σχήμα.</p>
+<p><img alt="1.4" src="_images/1.4.png" /></p>
+<div class="section" id="id4">
+<h3>Φασματική Ανάλυση<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Για τον υπολογισμό της ενέργειας ή ισχύος της κυματομορφής <span class="math notranslate nohighlight">\(x(t)\)</span>, ανάλογα με την περίπτωση
+σήματος, ισχύει</p>
+<div class="math notranslate nohighlight">
+\[E_x= \int_{-\infty}^{\infty} x^2(t) dt = \int_{-\infty}^{\infty} |X(f)|^2 df\]</div>
+<div class="math notranslate nohighlight">
+\[P_x= \lim_{T\to\infty} \frac{1}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} x^2(t) dt = \int_{-\infty}^{\infty} S_X(f) df\]</div>
+<p>όπου για σήματα ισχύος <span class="math notranslate nohighlight">\(S_Χ(f)\)</span> είναι η πυκνότητα φάσματος ισχύος (Power Spectral Density – PSD)
+της <span class="math notranslate nohighlight">\(x(t)\)</span>. Για σήματα διακριτού χρόνου που προκύπτουν από δειγματοληψία της <span class="math notranslate nohighlight">\(x(t)\)</span> με περίοδο <span class="math notranslate nohighlight">\(T_s\)</span>,
+οι αντίστοιχες σχέσεις υπολογισμό της ενέργειας ή ισχύος γίνονται</p>
+<div class="math notranslate nohighlight">
+\[E_x= T_s\sum_{n=-\infty}^{\infty} x^2[n]\]</div>
+<div class="math notranslate nohighlight">
+\[P_x= \lim_{N\to\infty} \frac{1}{2N+1} \sum_{n=-N}^{N} x^2[n]\]</div>
+<p>Ένας απλός τρόπος να εκτιμηθεί η πυκνότητα φάσματος ισχύος της κυματομορφής <span class="math notranslate nohighlight">\(x(t)\)</span> είναι να
+ληφθεί ο DTFT των δειγμάτων του σήματος και μετά να υψωθεί στο τετράγωνο το μέτρο του
+αποτελέσματος. Αυτός ο εκτιμητής αποκαλείται περιοδόγραμμα (periodogram). Το περιοδόγραμμα
+ενός πεπερασμένου μήκους <span class="math notranslate nohighlight">\(L\)</span> σήματος <span class="math notranslate nohighlight">\(x[n]\)</span> ορίζεται ως</p>
+<div class="math notranslate nohighlight">
+\[P_{xx}(f)\triangleq \frac{|X_d(\frac{f}{f_s})| ^2}{f_sL}\]</div>
+<p>όπου <span class="math notranslate nohighlight">\(X_d(\phi)\)</span> o DTFT του σήματος. Με το μήκος <span class="math notranslate nohighlight">\(L\)</span> να τείνει στο άπειρο, το περιοδόγραμμα <span class="math notranslate nohighlight">\(P_{xx}(f)\)</span>
+τείνει στην πυκνότητα φάσματος ισχύος <span class="math notranslate nohighlight">\(S_Χ(f)\)</span>. Ο υπολογισμός του περιοδογράμματος σε
+πεπερασμένο πλήθος συχνοτήτων <span class="math notranslate nohighlight">\(kf_s/Ν\)</span>, <span class="math notranslate nohighlight">\(k=0\)</span>, <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(…\)</span> , <span class="math notranslate nohighlight">\(Ν\)</span> δίνει</p>
+<div class="math notranslate nohighlight">
+\[P_{xx}[k]=\frac{|X_k| ^2}{f_sL} , k=0, 1, ...,N-1\]</div>
+<p>όπου <span class="math notranslate nohighlight">\(X_k\)</span> και ο DFT της πεπερασμένου μήκους <span class="math notranslate nohighlight">\(L\)</span> σειράς δειγμάτων του σήματος. Η ισχύς του
+σήματος είναι τότε</p>
+<div class="math notranslate nohighlight">
+\[P_{X}=\frac{1}{f_sL} \sum_{k=0}^{N-1} |X_k|^2f_o =\frac{1}{NL} \sum_{k=0}^{N-1} |X_k|^2 = \frac{1}{L}\sum_{n=0}^{L-1} |x_n|^2\]</div>
+<p>όπου η τελευταία ισότητα προκύπτει από το θεώρημα Parseval, που για την περίπτωση του DFT
+εκφράζεται ως:</p>
+<div class="math notranslate nohighlight">
+\[ \sum_{n=0}^{N-1} |x_n|^2 = \frac{1}{N} \sum_{k=0}^{N-1} |X_k|^2\]</div>
+<p>Στην ειδική περίπτωση περιοδικών σημάτων έχουμε</p>
+<div class="math notranslate nohighlight">
+\[S_X(f)=\sum_{k=-\infty}^{\infty} |X[k]|^2\delta(f-\frac{k}{T_o})\]</div>
+<div class="math notranslate nohighlight">
+\[P_X(f)=\sum_{k=-\infty}^{\infty} |X[k]|^2\]</div>
+<p>όπου <span class="math notranslate nohighlight">\(X[k]\)</span> οι συντελεστές του αναπτύγματος σε σειρά Fourier και <span class="math notranslate nohighlight">\(T_o\)</span> η περίοδος του σήματος.</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>Μέρος 3:  Εφαρμογή Α<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Fs</span> <span class="o">=</span> <span class="mi">1000</span>  <span class="c1"># συχνότητα δειγματοληψίας 1000 Hz</span>
+<span class="n">Ts</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">Fs</span>  <span class="c1"># περίοδος δειγματοληψίας</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">1000</span>  <span class="c1"># μήκος σήματος (αριθμός δειγμάτων)</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">L</span> <span class="o">*</span> <span class="n">Ts</span>  <span class="c1"># διάρκεια σήματος</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">L</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">Ts</span><span class="p">,</span> <span class="n">Ts</span><span class="p">)</span>  <span class="c1"># χρονικές στιγμές υπολογισμού του σήματος</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">30</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span> \
+    <span class="o">+</span> <span class="mf">0.8</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">80</span> <span class="o">*</span> <span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="mi">2</span><span class="p">))</span> \
+    <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>  <span class="c1"># συνιστώσα 60 Hz</span>
+
+<span class="c1"># Σχεδιάστε το σήμα στο πεδίο του χρόνου</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mf">18.5</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;t (sec)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Amplitude&#39;</span><span class="p">,</span>
+       <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Time domain plot of x&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Time domain plot of x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="c1"># Υπολογίστε τον διακριτό μετασχηματισμό Fourier</span>
+
+<span class="k">def</span> <span class="nf">nextpow2</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>  <span class="c1"># επιστρέφει το n, τέτοιο ώστε 2^n &gt;= L</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">while</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">n</span>
+
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">nextpow2</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>  <span class="c1"># μήκος μετασχηματισμού Fourier.</span>
+<span class="c1"># η nextpow2 βρίσκει τη δύναμη του 2 που</span>
+<span class="c1"># είναι μεγαλύτερη ή ίση από το όρισμα L</span>
+<span class="n">Fo</span> <span class="o">=</span> <span class="n">Fs</span> <span class="o">/</span> <span class="n">N</span>  <span class="c1"># ανάλυση συχνότητας</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span> <span class="o">*</span> <span class="n">Fo</span>  <span class="c1"># διάνυσμα συχνοτήτων</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>  <span class="c1"># αριθμητικός υπολογισμός του διακριτού μετασχηματισμού Fourier (DFT) για Ν σημεία</span>
+
+<span class="c1"># Σχεδιάστε το σήμα στο πεδίο συχνότητας</span>
+
+<span class="c1"># Αφού το σήμα είναι πραγματικό μπορείτε να σχεδιάσετε μόνο τις θετικές συχνότητες</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mf">18.5</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">)],</span> <span class="nb">abs</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">)]))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;f (Hz)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Amplitude&#39;</span><span class="p">,</span>
+       <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Frequency domain plot of x&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Frequency domain plot of x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">f</span> <span class="o">-</span> <span class="n">Fs</span> <span class="o">/</span> <span class="mi">2</span>  <span class="c1"># ολίσθηση συχνοτήτων προς τα αριστερά κατά –Fs/2</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fftshift</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>  <span class="c1"># ολίσθηση της μηδενικής συχνότητας στο κέντρο του φάσματος</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mf">18.5</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;f (Hz)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Amplitude&#39;</span><span class="p">,</span>
+       <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Two sided spectrum of x&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Two sided spectrum of x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Υπολογίστε την ισχύ</span>
+
+<span class="n">power</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">X</span><span class="p">))</span> <span class="o">/</span> <span class="n">N</span> <span class="o">/</span> <span class="n">L</span>  <span class="c1"># υπολογισμός πυκνότητας ισχύος</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mf">18.5</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">power</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Frequency (Hz)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Power&#39;</span><span class="p">,</span>
+       <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Periodogram&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Periodogram&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Exercise1_66_0.png" src="_images/Exercise1_66_0.png" />
+<img alt="_images/Exercise1_66_1.png" src="_images/Exercise1_66_1.png" />
+<img alt="_images/Exercise1_66_2.png" src="_images/Exercise1_66_2.png" />
+<img alt="_images/Exercise1_66_3.png" src="_images/Exercise1_66_3.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Part 2 Προσθέστε θόρυβο στο σήμα</span>
+
+<span class="c1"># Συμπληρώστε τον κώδικα για τη δημιουργία του σήματος θορύβου n με τη βοήθεια της συνάρτησης randn.</span>
+<span class="c1"># Το διάνυσμα θορύβου n θα πρέπει να είναι του ίδιου μεγέθους με αυτό της ημιτονοειδούς κυματομορφής x του πρώτου μέρους.</span>
+<span class="c1"># Σχεδιάστε το σήμα θορύβου στο διάστημα από 0 έως 0.2 sec και κλίμακα σε από -2 έως 2.</span>
+<span class="c1"># Υπολογίστε το περιοδόγραμμα του n και σχεδιάστε την πυκνότητα φάσματος ισχύος του σήματος θορύβου.</span>
+<span class="c1"># Προσθέστε το σήμα θορύβου και το x για να λάβετε το σήμα με θόρυβο s.</span>
+<span class="c1"># Σχεδιάσατε το σήμα με θόρυβο s στο πεδίο του χρόνου στην περιοχή 0 έως 0.2 sec </span>
+<span class="c1"># και κλίμακα από -2 έως 2 καθώς και το αμφίπλευρο φάσμα του.</span>
+
+<span class="n">rand_n</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mf">18.5</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">rand_n</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;t (sec)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Amplitude&#39;</span><span class="p">,</span>
+       <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Time domain plot of n&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">2</span><span class="o">^</span><span class="n">nextpow2</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+<span class="n">Fo</span><span class="o">=</span><span class="n">Fs</span><span class="o">/</span><span class="n">N</span>           
+<span class="n">f</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">N</span><span class="p">))</span><span class="o">*</span><span class="n">Fo</span>     
+<span class="n">rand_N</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">rand_n</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>   
+          
+<span class="n">f</span><span class="o">=</span><span class="n">f</span><span class="o">-</span><span class="n">Fs</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">rand_N</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fftshift</span><span class="p">(</span><span class="n">rand_N</span><span class="p">)</span>     
+
+<span class="n">power_n</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">rand_N</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">rand_N</span><span class="p">))</span><span class="o">/</span><span class="n">N</span><span class="o">/</span><span class="n">L</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mf">18.5</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">power_n</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Frequency (Hz)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Power&#39;</span><span class="p">,</span>
+       <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Periodogram of n&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">rand_n</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mf">18.5</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;t (sec)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Amplitude&#39;</span><span class="p">,</span>
+       <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Time domain plot of s&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                  
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">2</span><span class="o">^</span><span class="n">nextpow2</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>  
+                   
+<span class="n">Fo</span><span class="o">=</span><span class="n">Fs</span><span class="o">/</span><span class="n">N</span>           
+<span class="n">f</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">N</span><span class="p">))</span><span class="o">*</span><span class="n">Fo</span>      
+<span class="n">S</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>       
+                             
+<span class="n">f</span><span class="o">=</span><span class="n">f</span><span class="o">-</span><span class="n">Fs</span><span class="o">/</span><span class="mi">2</span>       
+<span class="n">S</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fftshift</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>    
+                  
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mf">18.5</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="nb">abs</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;f (Hz)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Amplitude&#39;</span><span class="p">,</span>
+       <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Two sided spectrum of s&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Exercise1_67_0.png" src="_images/Exercise1_67_0.png" />
+<img alt="_images/Exercise1_67_1.png" src="_images/Exercise1_67_1.png" />
+<img alt="_images/Exercise1_67_2.png" src="_images/Exercise1_67_2.png" />
+<img alt="_images/Exercise1_67_3.png" src="_images/Exercise1_67_3.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Part 3. Πολλαπλασιασμός σημάτων</span>
+
+<span class="c1"># Συμπληρώστε τον κώδικα δημιουργίας ενός ημιτονοειδούς σήματος συχνότητας</span>
+<span class="c1"># 100 Hz και πολλαπλασιάστε με το προηγούμενο σήμα s.</span>
+<span class="c1"># Τα δύο σήματα θα πρέπει να είναι του ίδιου μεγέθους.</span>
+<span class="c1"># Σχεδιάστε το αποτέλεσμα στο πεδίο του χρόνου στην περιοχή 0 έως 0.2 sec</span>
+<span class="c1"># και κλίμακα από -2 έως 2 καθώς και στο πεδίο της συχνότητας</span>
+<span class="c1"># χρησιμοποιώντας τη συνάρτηση fftshift.</span>
+
+
+<span class="n">s_mul</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
+<span class="n">s_final</span> <span class="o">=</span> <span class="n">s</span> <span class="o">*</span> <span class="n">s_mul</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mf">18.5</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">s_final</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;t (sec)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Amplitude&#39;</span><span class="p">,</span>
+       <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Time domain plot of s * sin(2pi*100t)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Time domain plot of s * sin(2pi*100t)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">nextpow2</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+
+<span class="n">Fo</span> <span class="o">=</span> <span class="n">Fs</span> <span class="o">/</span> <span class="n">N</span>
+<span class="n">f</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span> <span class="o">*</span> <span class="n">Fo</span>
+<span class="n">S_final</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">s_final</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">f</span> <span class="o">-</span> <span class="n">Fs</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">S_final</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fftshift</span><span class="p">(</span><span class="n">S_final</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mf">18.5</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">S_final</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;f (Hz)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Amplitude&#39;</span><span class="p">,</span>
+       <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Two sided spectrum of s * sin(2pi*100t)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Two sided spectrum of s * sin(2pi*100t)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Exercise1_68_0.png" src="_images/Exercise1_68_0.png" />
+<img alt="_images/Exercise1_68_1.png" src="_images/Exercise1_68_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>Μέρος 4:  Εφαρμογή Β<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>Να γραφεί σε Python συνάρτηση φασματικής ανάλυσης, παρόμοια με την <code class="docutils literal notranslate"><span class="pre">signal.welch()</span></code>: θα δέχεται ως είσοδο διάνυσμα πραγματικού σήματος καθώς και τη συχνότητα δειγματοληψίας, <span class="math notranslate nohighlight">\(F_s\)</span>, και θα σχεδιάζει τη μονόπλευρη φασματική πυκνότητα του σήματος στην περιοχή <span class="math notranslate nohighlight">\([0-F_s/2)\)</span>. Το σήμα θα τεμαχίζεται σε τμήματα μήκους ίσου με τη δύναμη του <span class="math notranslate nohighlight">\(2\)</span> την πλησιέστερη στο <span class="math notranslate nohighlight">\(1/8\)</span> του συνολικού του μήκους, αλλά όχι μικρότερου από 256. Τα τμήματα θα είναι επικαλυπτόμενα κατά <span class="math notranslate nohighlight">\(50\%\)</span>. Το τελευταίο τμήμα, εάν υπολείπεται σε μήκος των άλλων, θα αγνοείται. Θα υπολογίζεται με FFT το φάσμα κάθε τμήματος και θα λαμβάνεται η μέση τιμή όλων των τμημάτων. Η συνάρτηση να δοκιμαστεί με το σήμα του παραδείγματος 1.1 και να συγκριθεί το αποτέλεσμα με το αντίστοιχο της <code class="docutils literal notranslate"><span class="pre">signal.welch()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pwelch</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Fs</span><span class="p">):</span>
+    <span class="n">part_size</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">nextpow2</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">//</span> <span class="mi">8</span><span class="p">),</span> <span class="mi">256</span><span class="p">)</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">nextpow2</span><span class="p">(</span><span class="n">part_size</span><span class="p">)</span>
+
+    <span class="n">Fo</span> <span class="o">=</span> <span class="n">Fs</span> <span class="o">/</span> <span class="n">N</span>
+    <span class="n">f_welch</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span> <span class="o">*</span> <span class="n">Fo</span>
+
+    <span class="n">part_start</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">part_end</span> <span class="o">=</span> <span class="n">part_start</span> <span class="o">+</span> <span class="n">part_size</span>
+    <span class="n">cntr</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">fft_sum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="n">part_start</span> <span class="o">+</span> <span class="n">part_size</span> <span class="o">&lt;</span> <span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+
+        <span class="n">part</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">part_start</span><span class="p">):</span><span class="nb">int</span><span class="p">(</span><span class="n">part_end</span><span class="p">)]</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">part</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+            <span class="n">fft_sum</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">temp</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="n">part_start</span> <span class="o">+=</span> <span class="n">part_size</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="n">part_end</span> <span class="o">=</span> <span class="n">part_start</span> <span class="o">+</span> <span class="n">part_size</span>
+        <span class="n">cntr</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="n">fft_avg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">fft_sum</span><span class="p">,</span> <span class="n">cntr</span><span class="p">)</span>
+    <span class="n">avg_pwr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">fft_avg</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">fft_avg</span><span class="p">))</span> <span class="o">/</span> <span class="n">N</span> <span class="o">/</span> <span class="n">part_size</span>
+
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mf">18.5</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">f_welch</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">N</span> <span class="o">//</span> <span class="mi">2</span><span class="p">],</span> <span class="n">avg_pwr</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">N</span> <span class="o">//</span> <span class="mi">2</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Frequency (Hz)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Power&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Periodogram of pwelch (Μπρανίκας Φώτιος el17147)&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Periodogram of pwelch&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">f_welch</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">N</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)],</span> <span class="n">avg_pwr</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">N</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Fs</span><span class="o">=</span><span class="mi">500</span>
+<span class="n">f1</span><span class="p">,</span><span class="n">Pxx1</span> <span class="o">=</span> <span class="n">pwelch</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">Fs</span><span class="p">)</span>
+<span class="n">f2</span><span class="p">,</span><span class="n">Pxx2</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">welch</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="n">Fs</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mf">18.5</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">f2</span><span class="p">,</span><span class="n">Pxx2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Frequency (Hz)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Power&#39;</span><span class="p">,</span>
+       <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Periodogram signal.welch()&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Exercise1_71_0.png" src="_images/Exercise1_71_0.png" />
+<img alt="_images/Exercise1_71_1.png" src="_images/Exercise1_71_1.png" />
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Fotis Branikas<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

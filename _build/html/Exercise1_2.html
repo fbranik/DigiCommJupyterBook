@@ -1,0 +1,459 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Μέρος 2: Δειγματοληψία - Ψηφιοποίηση &#8212; Μία Πρώτη Προσέγγιση</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Μέρος 3: Εφαρμογή Α" href="Exercise1_3.html" />
+    <link rel="prev" title="Μέρος 1: Εξάσκηση στην Python" href="Exercise1_1.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Μία Πρώτη Προσέγγιση</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Εισαγωγή
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="Exercise1_0.html">
+   Άσκηση 1η
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise1_1.html">
+     Μέρος 1 Εξάσκηση
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Μέρος 2  Δειγματοληψία - Ψηφιοποίηση
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise1_3.html">
+     Μέρος 3 Εφαρμογή Α
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise1_4.html">
+     Μέρος 4 Εφαρμογή B
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="Exercise2_0.html">
+   Άσκηση 2η
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_1.html">
+     <em>
+      Μέρος 1: Σχεδιασμός και υλοποίηση φίλτρων
+     </em>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_1.html#sonar">
+     Σήμα sonar
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_1.html#id4">
+     Σήμα βιολιού
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_1.html#id6">
+     Βαθυπερατά φίλτρα
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_1.html#id10">
+     Ζωνοπερατά φίλτρα
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_1.html#hz-950-hz-3000-hz-3500-hz">
+     Ζωνοπερατό φίλτρο με ζώνες διέλευσης (750 Hz, 950 Hz) και (3000 Hz, 3500 Hz)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_2.html">
+     Μέρος 2 Ζωνοπερατό φίλτρο
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_2.html#sonar">
+     Σήμα sonar
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise2_2.html#id2">
+     Ζωνοπερατό φίλτρο με ζώνες διέλευσης (750 Hz, 950 Hz) και (3000 Hz, 3500 Hz)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Exercise1_2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Exercise1_2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Φασματική Ανάλυση
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>Μέρος 2:  Δειγματοληψία - Ψηφιοποίηση<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>Τα πρωτογενή σήματα είναι κυρίως αναλογικά (συνεχούς χρόνου). Για να τα παραστήσουμε και επεξεργαστούμε στον υπολογιστή μας (ή άλλη ψηφιακή μηχανή) θα πρέπει πρώτα να τα ψηφιοποιήσουμε. Υποθέστε ένα σήμα συνεχούς χρόνου <span class="math notranslate nohighlight">\(x(t)\)</span> με μετασχηματισμό Fourier (Continuous Time Fourier Transform – CTFT):
+<span class="math notranslate nohighlight">\(X(f)=\int_{-\infty}^{\infty} x(t)e^{-j2\pi ft} dt\)</span>
+<img alt="1.1" src="_images/1_1.png" /></p>
+<p>Λαμβάνοντας δείγματα του <span class="math notranslate nohighlight">\(x(t)\)</span> με ρυθμό <span class="math notranslate nohighlight">\(f_s=1/T_s\)</span> παράγεται σήμα διακριτού χρόνου <span class="math notranslate nohighlight">\(x(nT_s)\)</span>. Μαθηματικά το αναπαριστάνουμε ως σειρά συναρτήσεων δέλτα</p>
+<div class="math notranslate nohighlight">
+\[x_\delta (t)=\sum_{n=-\infty}^{\infty}x(nT_s)\delta(t-nT_s)=x(t\sum_{n=-\infty}^{\infty}\delta(t-nT_s)\]</div>
+<p>με μετασχηματισμό Fourier</p>
+<div class="math notranslate nohighlight">
+\[X_\delta (f)=\sum_{n=-\infty}^{\infty}x(nT_s)e^{-j2\pi fnT_s}=X(f)*1/T_s\sum_{n=-\infty}^{\infty}\delta(f-k/T_s)=1/T_s\sum_{n=-\infty}^{\infty}X(f-k/T_s)\]</div>
+<p>που είναι περιοδική συνάρτηση.<br />
+<img alt="1.2" src="_images/1.2.png" /></p>
+<p>Για βαθυπερατά σήματα <span class="math notranslate nohighlight">\(x(t)\)</span> εύρους ζώνης W, με την υπόθεση ότι ο ρυθμός δειγματοληψίας <span class="math notranslate nohighlight">\(fs ≥
+2W\)</span>, ισχύει ότι <span class="math notranslate nohighlight">\(X(f) = T_s X_\delta(f)\)</span>, <span class="math notranslate nohighlight">\(0 ≤ f ≤ W\)</span>, δηλαδή, το σήμα <span class="math notranslate nohighlight">\(X(f)\)</span> προκύπτει μετά από διάβαση του
+δειγματοληπτημένου <span class="math notranslate nohighlight">\(x_\delta(t)\)</span> μέσω ιδανικού βαθυπερατού φίλτρου κέρδους <span class="math notranslate nohighlight">\(T_s\)</span>. Από το προηγούμενο
+σχήμα γίνεται φανερό ότι εάν η δειγματοληψία γίνει με συχνότητα μικρότερη του διπλασίου της
+ανώτερης συχνότητας <span class="math notranslate nohighlight">\(W\)</span> του σήματος (υποδειγμάτιση – undersampling), τότε εμφανίζονται στην
+περιοχή συχνοτήτων του σήματος «είδωλα» φάσματος από ανώτερες συχνότητες που δεν
+επιτρέπουν την ακριβή αποκατάσταση του αρχικού σήματος συνεχούς χρόνου. Το φαινόμενο αυτό
+ονομάζεται <strong>αναδίπλωση</strong> ή <strong>επικάλυψη</strong> (aliasing), το δε σφάλμα κατά την αποκατάσταση του
+αρχικού σήματος αποκαλείται σφάλμα αναδίπλωσης (aliasing error).
+Η δειγματοληψία στο πεδίο του χρόνου αποτελεί τη βάση για τον ορισμό του μετασχηματισμού
+Fourier διακριτού χρόνου (Discrete Time Fourier Transform – DTFT). Για μια σειρά διακριτών
+αριθμών <span class="math notranslate nohighlight">\(x[n]\)</span>, ο μετασχηματισμός Fourier διακριτού χρόνου ορίζεται ως:
+<span class="math notranslate nohighlight">\(X_\delta (\phi)\triangleq\sum_{n=-\infty}^{\infty}x[n]e^{-j2\pi n\phi}\)</span></p>
+<p>O DTFT είναι περιοδική συνάρτηση με περίοδο <span class="math notranslate nohighlight">\(1\)</span>, επομένως, αρκεί ο υπολογισμός του στο
+διάστημα συχνοτήτων <span class="math notranslate nohighlight">\([0,1]\)</span> ή ισοδύναμα <span class="math notranslate nohighlight">\([-½,½]\)</span>. Να σημειωθεί ότι ο DTFT, παρότι προκύπτει από
+μια σειρά διακριτών αριθμών <span class="math notranslate nohighlight">\(x[n]\)</span>, είναι συνεχής συνάρτηση της μεταβλητής <span class="math notranslate nohighlight">\(\phi\)</span> όπως παραστατικά
+φαίνεται στο επόμενο σχήμα.
+<img alt="1.4" src="_images/1.4.png" /></p>
+<p>Με τη σειρά των διακριτών αριθμών να προκύπτει ως αποτέλεσμα δειγματοληψίας, <span class="math notranslate nohighlight">\(x[n]=x(nT_s)\)</span>, ο
+DTFT και ο μετασχηματισμός Fourier <span class="math notranslate nohighlight">\(X_\delta(f)\)</span> του δειγματοληπτημένου σήματος συνδέονται μέσω
+της αντιστοιχίας <span class="math notranslate nohighlight">\(\phi ↔ f/f_s\)</span>. Η συνήθης πρακτική είναι να παριστάνουμε τον λόγο <span class="math notranslate nohighlight">\(f/f_s\)</span> ως
+κανονικοποιημένη συχνότητα <span class="math notranslate nohighlight">\(\phi\)</span> (<span class="math notranslate nohighlight">\(f_D\)</span>, στις σημειώσεις σας) και οι πραγματικές συχνότητες να
+προκύπτουν ως πολλαπλάσιά της (συνήθως κλασματικά). Για τη σύνδεση του DTFT με τον μετασχηματισμό Fourier <span class="math notranslate nohighlight">\(X(f)\)</span> του σήματος πρέπει επιπλέον να γίνει αναγωγή στην περίοδο δειγματοληψίας με πολλαπλασιασμό επί <span class="math notranslate nohighlight">\(T_s\)</span> (ή διαίρεση με <span class="math notranslate nohighlight">\(f_s\)</span>).
+Κατ΄ αναλογία με τη δειγματοληψία σημάτων στο χρόνο μπορούμε να κάνουμε δειγματοληψία στο
+πεδίο της συχνότητας λαμβάνοντας διακριτές τιμές <span class="math notranslate nohighlight">\(X(kf_o)\)</span> του μετασχηματισμού Fourier που
+αντιστοιχούν σε ανάλυση συχνότητας <span class="math notranslate nohighlight">\(f_o=1/T_o\)</span>. Αυτό ισοδυναμεί με περιοδική επανάληψη του
+σήματος συνεχούς χρόνου <span class="math notranslate nohighlight">\(x(t)\)</span> κάθε <span class="math notranslate nohighlight">\(Τ_ο\)</span>, αφού το περιοδικό σήμα
+<span class="math notranslate nohighlight">\(x_p (t)=\sum_{n=-\infty}^{\infty}x(t-nT_o)\)</span></p>
+<p>έχει μετασχηματισμό Fourier</p>
+<div class="math notranslate nohighlight">
+\[X(f)\sum_{n=-\infty}^{\infty}e^{-j2\pi f n T_o}= X(f)\frac{1}{T_o}\sum_{k=-\infty}^{\infty}\delta(f-\frac{k}{T_o})=\frac{1}{T_o}\sum_{k=-\infty}^{\infty}X(\frac{k}{T_o})\delta(f-\frac{k}{T_o})\]</div>
+<p>Επομένως, <span class="math notranslate nohighlight">\(X[k] = X(kf_o)/Τ_o\)</span> είναι οι συντελεστές του αναπτύγματος σε σειρά Fourier.του περιοδικού
+σήματος <span class="math notranslate nohighlight">\(x_p(t)\)</span>. Προφανώς, για σήματα <span class="math notranslate nohighlight">\(x(t)\)</span> πεπερασμένης διάρκειας, όπου <span class="math notranslate nohighlight">\(x(t)=0\)</span> για <span class="math notranslate nohighlight">\(|t| ≥ T\)</span>, με την
+υπόθεση ότι η περίοδος <span class="math notranslate nohighlight">\(T_o ≥ 2T\)</span>, ισχύει ότι <span class="math notranslate nohighlight">\(x(t) = x_p(t)\)</span> για <span class="math notranslate nohighlight">\(|t| ≤ T\)</span>.
+Στην πράξη, τα σήματα έχουν πολύ μεγάλη διάρκεια για να μπορέσουμε να τα αναλύσουμε στην
+ολότητά τους. Έτσι εφαρμόζουμε ένα ορθογωνικό χρονικό παράθυρο, ώστε να διατηρήσουμε μόνο
+το πιο σημαντικό τους μέρος για το διάστημα παρατήρησης και <span class="math notranslate nohighlight">\(x(t)= 0\)</span>, αλλού. Κατά τον
+υπολογισμό του DTFT <span class="math notranslate nohighlight">\(X_d(\phi)\)</span> ενός τέτοιου ακρωτηριασμένου σήματος, αντί του απείρου
+αθροίσματος, περιοριζόμαστε σε μια πεπερασμένου μήκους <span class="math notranslate nohighlight">\(L\)</span> σειρά αριθμών <span class="math notranslate nohighlight">\(x[n]\)</span>, οπότε</p>
+<div class="math notranslate nohighlight">
+\[X_d (\phi)=\sum_{n=0}^{L-1}x[n]e^{-j2\pi n\phi}\]</div>
+<p>H δειγματοληψία του <span class="math notranslate nohighlight">\(X_d(\phi)\)</span> στο πεδίο συχνότητας σε <span class="math notranslate nohighlight">\(Ν\)</span> ισαπέχουσες κανονικοποιημένες συχνότητες <span class="math notranslate nohighlight">\(0\)</span>, <span class="math notranslate nohighlight">\(1/Ν\)</span>, <span class="math notranslate nohighlight">\(2/Ν\)</span>, <span class="math notranslate nohighlight">\(…\)</span>, <span class="math notranslate nohighlight">\((Ν-1)/Ν\)</span>, δίνει</p>
+<div class="math notranslate nohighlight">
+\[X[k]=X_d (\frac{k}{N})=\sum_{n=0}^{N-1}x[n]e^{-j2\pi n\frac{k}{N}}, 0\leq k \leq N-1\]</div>
+<p>όπου, εάν <span class="math notranslate nohighlight">\(N≥L\)</span>, θέτουμε <span class="math notranslate nohighlight">\(x[n]=0\)</span> για <span class="math notranslate nohighlight">\(n≥L\)</span>. Η τελευταία σχέση αναγνωρίζεται ως ο διακριτός μετασχηματισμός Fourier (Discrete Fourier Transform – DFT), ο οποίος για μια πεπερασμένη σειρά <span class="math notranslate nohighlight">\(xn\)</span>, <span class="math notranslate nohighlight">\(n=0\)</span>, <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(…\)</span>, <span class="math notranslate nohighlight">\(N-1\)</span>, ορίζεται ως:</p>
+<div class="math notranslate nohighlight">
+\[X_k\triangleq \sum_{n=0}^{N-1}x_n e^{-j2\pi n\frac{k}{N}}, 0\leq k \leq N-1\]</div>
+<p>και ο αντίστροφός του είναι</p>
+<div class="math notranslate nohighlight">
+\[x_n= \frac{1}{N} \sum_{k=0}^{N-1}X_k e^{-j2\pi n\frac{k}{N}}, 0\leq n \leq N-1\]</div>
+<p>Η <span class="math notranslate nohighlight">\(X_d(\phi)\)</span> ως DTFT είναι περιοδική συνάρτηση και εάν η αρχική σειρά xn ήταν περιοδική (και δεν
+εφαρμόζαμε το παράθυρο), τότε η <span class="math notranslate nohighlight">\(X_d(\phi)\)</span> θα ήταν μηδέν παντού εκτός των σημείων της
+δειγματοληψίας <span class="math notranslate nohighlight">\(k/Ν\)</span>. Δηλαδή, εάν θεωρήσουμε μια πεπερασμένου μήκους σειρά αριθμών που
+επαναλαμβάνεται περιοδικά, o διακριτού χρόνου μετασχηματισμός Fourier της (DTFT) είναι και
+αυτός περιοδικός και διακριτός. Επιπλέον, ο DFT και ο αντίστροφός του IDFT, εάν δεν
+περιορίζαμε τους δείκτες <span class="math notranslate nohighlight">\(n\)</span> και <span class="math notranslate nohighlight">\(k\)</span> μεταξύ <span class="math notranslate nohighlight">\(0\)</span> και <span class="math notranslate nohighlight">\(N-1\)</span>, θα ήταν περιοδικές συναρτήσεις. Άρα η
+πεπερασμένη σειρά xn μπορεί να θεωρηθεί ως ένα περιοδικό σήμα διακριτού χρόνου ιδωμένο μόνο
+κατά τη διάρκεια μιας περιόδου και ο DFT, η σειρά <span class="math notranslate nohighlight">\(X_k\)</span>, ως τα δείγματα με ανάλυση <span class="math notranslate nohighlight">\(1/Ν\)</span> του DTFT
+<span class="math notranslate nohighlight">\(X_d(\phi)\)</span> στο πεδίο κανονικοποιημένων συχνοτήτων <span class="math notranslate nohighlight">\([0,1]\)</span>, όπως φαίνεται στο επόμενο σχήμα.</p>
+<p><img alt="1.4" src="_images/1.4.png" /></p>
+<div class="section" id="id2">
+<h2>Φασματική Ανάλυση<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Για τον υπολογισμό της ενέργειας ή ισχύος της κυματομορφής <span class="math notranslate nohighlight">\(x(t)\)</span>, ανάλογα με την περίπτωση
+σήματος, ισχύει</p>
+<div class="math notranslate nohighlight">
+\[E_x= \int_{-\infty}^{\infty} x^2(t) dt = \int_{-\infty}^{\infty} |X(f)|^2 df\]</div>
+<div class="math notranslate nohighlight">
+\[P_x= \lim_{T\to\infty} \frac{1}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} x^2(t) dt = \int_{-\infty}^{\infty} S_X(f) df\]</div>
+<p>όπου για σήματα ισχύος <span class="math notranslate nohighlight">\(S_Χ(f)\)</span> είναι η πυκνότητα φάσματος ισχύος (Power Spectral Density – PSD)
+της <span class="math notranslate nohighlight">\(x(t)\)</span>. Για σήματα διακριτού χρόνου που προκύπτουν από δειγματοληψία της <span class="math notranslate nohighlight">\(x(t)\)</span> με περίοδο <span class="math notranslate nohighlight">\(T_s\)</span>,
+οι αντίστοιχες σχέσεις υπολογισμό της ενέργειας ή ισχύος γίνονται</p>
+<div class="math notranslate nohighlight">
+\[E_x= T_s\sum_{n=-\infty}^{\infty} x^2[n]\]</div>
+<div class="math notranslate nohighlight">
+\[P_x= \lim_{N\to\infty} \frac{1}{2N+1} \sum_{n=-N}^{N} x^2[n]\]</div>
+<p>Ένας απλός τρόπος να εκτιμηθεί η πυκνότητα φάσματος ισχύος της κυματομορφής <span class="math notranslate nohighlight">\(x(t)\)</span> είναι να
+ληφθεί ο DTFT των δειγμάτων του σήματος και μετά να υψωθεί στο τετράγωνο το μέτρο του
+αποτελέσματος. Αυτός ο εκτιμητής αποκαλείται περιοδόγραμμα (periodogram). Το περιοδόγραμμα
+ενός πεπερασμένου μήκους <span class="math notranslate nohighlight">\(L\)</span> σήματος <span class="math notranslate nohighlight">\(x[n]\)</span> ορίζεται ως</p>
+<div class="math notranslate nohighlight">
+\[P_{xx}(f)\triangleq \frac{|X_d(\frac{f}{f_s})| ^2}{f_sL}\]</div>
+<p>όπου <span class="math notranslate nohighlight">\(X_d(\phi)\)</span> o DTFT του σήματος. Με το μήκος <span class="math notranslate nohighlight">\(L\)</span> να τείνει στο άπειρο, το περιοδόγραμμα <span class="math notranslate nohighlight">\(P_{xx}(f)\)</span>
+τείνει στην πυκνότητα φάσματος ισχύος <span class="math notranslate nohighlight">\(S_Χ(f)\)</span>. Ο υπολογισμός του περιοδογράμματος σε
+πεπερασμένο πλήθος συχνοτήτων <span class="math notranslate nohighlight">\(kf_s/Ν\)</span>, <span class="math notranslate nohighlight">\(k=0\)</span>, <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(…\)</span> , <span class="math notranslate nohighlight">\(Ν\)</span> δίνει</p>
+<div class="math notranslate nohighlight">
+\[P_{xx}[k]=\frac{|X_k| ^2}{f_sL} , k=0, 1, ...,N-1\]</div>
+<p>όπου <span class="math notranslate nohighlight">\(X_k\)</span> και ο DFT της πεπερασμένου μήκους <span class="math notranslate nohighlight">\(L\)</span> σειράς δειγμάτων του σήματος. Η ισχύς του
+σήματος είναι τότε</p>
+<div class="math notranslate nohighlight">
+\[P_{X}=\frac{1}{f_sL} \sum_{k=0}^{N-1} |X_k|^2f_o =\frac{1}{NL} \sum_{k=0}^{N-1} |X_k|^2 = \frac{1}{L}\sum_{n=0}^{L-1} |x_n|^2\]</div>
+<p>όπου η τελευταία ισότητα προκύπτει από το θεώρημα Parseval, που για την περίπτωση του DFT
+εκφράζεται ως:</p>
+<div class="math notranslate nohighlight">
+\[ \sum_{n=0}^{N-1} |x_n|^2 = \frac{1}{N} \sum_{k=0}^{N-1} |X_k|^2\]</div>
+<p>Στην ειδική περίπτωση περιοδικών σημάτων έχουμε</p>
+<div class="math notranslate nohighlight">
+\[S_X(f)=\sum_{k=-\infty}^{\infty} |X[k]|^2\delta(f-\frac{k}{T_o})\]</div>
+<div class="math notranslate nohighlight">
+\[P_X(f)=\sum_{k=-\infty}^{\infty} |X[k]|^2\]</div>
+<p>όπου <span class="math notranslate nohighlight">\(X[k]\)</span> οι συντελεστές του αναπτύγματος σε σειρά Fourier και <span class="math notranslate nohighlight">\(T_o\)</span> η περίοδος του σήματος.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Exercise1_1.html" title="previous page">Μέρος 1:  Εξάσκηση στην Python</a>
+    <a class='right-next' id="next-link" href="Exercise1_3.html" title="next page">Μέρος 3:  Εφαρμογή Α</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Fotis Branikas<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

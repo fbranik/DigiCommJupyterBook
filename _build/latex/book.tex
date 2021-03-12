@@ -67,7 +67,7 @@
 
 
 \title{Μία Πρώτη Προσέγγιση}
-\date{Mar 11, 2021}
+\date{Mar 12, 2021}
 \release{}
 \author{Fotis Branikas}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -78,22 +78,1329 @@
 \pagestyle{empty}
 \sphinxmaketitle
 \pagestyle{plain}
-\sphinxtableofcontents
+
 \pagestyle{normal}
-\phantomsection\label{\detokenize{intro::doc}}
+
+\section*{Άσκηση 1η}
+\label{\detokenize{Exercise1_0:id1}}\label{\detokenize{Exercise1_0::doc}}
+\sphinxAtStartPar
+Σκοπός της πρώτης σειράς ασκήσεων είναι, αφ’ ενός η εξοικείωση με το προγραμματιστικό περιβάλλον της Python, αφ’ ετέρου, η εισαγωγή στους τρόπους παράστασης και επεξεργασίας τηλεπικοινωνιακών σημάτων στη συγκεκριμένη γλώσσα προγραμματισμού.
 
 
+\subsection*{Jupyter notebook}
+\label{\detokenize{Exercise1_0:jupyter-notebook}}
+\sphinxAtStartPar
+To Project Jupyter είναι ένας μη κερδοσκοπικός οργανισμός με αποστολή τη συγγραφή ανοικτού λογισμικού για διαδραστικές εφαρμογές. Ξεκίνησε από ipython, ωστόσο σήμερα προσφέρει προγράμματα σε πολλές γλώσσες προγραμματισμού.
+
+\sphinxAtStartPar
+Το \sphinxhref{https://jupyter.org/}{jupyter notebook} είναι μια πλατφόρμα web ανοικτού λογισμικού για την ανάπτυξη διαδραστικών εφαρμογών, κυρίως για επεξεργασία (επιστημονικών) δεδομένων και μηχανικής μάθησης.
 
 
+\subsubsection*{Μέρος 1:  Εξάσκηση στην Python}
+\label{\detokenize{Exercise1_1:python}}\label{\detokenize{Exercise1_1::doc}}
 
-
-
-\chapter{Πληροφορίες για το Jupyter Book}
-\label{\detokenize{intro:jupyter-book}}
+\bigskip\hrule\bigskip
 
 
 \sphinxAtStartPar
-\sphinxhref{https://beta.jupyterbook.org/intro.html}{Περισσότερες πληροφορίες}\sphinxhref{https://beta.jupyterbook.org/advanced/advanced.html\#working-on-windows}{Πληροφορίες για εγκατάσταση σε Windows}
+Μην ξεχνάτε ότι η IPython μας δίνει τη δυνατότητα να ‘εξερευνήσουμε’ το περιεχόμενο ενός package, χρησιμοποιώντας τη δυνατότητα του tab\sphinxhyphen{}completion, ή τη χρήση του ? για help/documentation:
+Π.χ., για να δούμε όλα τα περιεχόμενα του signal namespace δίνουμε:
+
+\sphinxAtStartPar
+In {[}3{]}: signal?
+
+\sphinxAtStartPar
+και για να καλέσουμε την ενσωμετωμένη τεκμηρίωση της numpy, δίνουμε:
+
+\sphinxAtStartPar
+In {[}4{]}: np?
+
+\sphinxAtStartPar
+Περισσότερες πληροφορίες μπορείτε να πάρετε από το \sphinxurl{http://www.numpy.org}.
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Δημιουργήστε ένα βαθμωτό (μονοδιάστατο) μέγεθος}
+
+\PYG{n}{s}\PYG{o}{=}\PYG{l+m+mi}{2}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{s =}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{s}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+s = 2
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Δημιουργείστε ένα διάνυσμα πραγματικών τιμών:}
+\PYG{c+c1}{\PYGZsh{} Στο MATLAB: v = [1,5,9] ή v = [1 5 9]}
+
+\PYG{n}{v}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{l+m+mi}{9}\PYG{p}{]}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{v =}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{v}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+v = [1 5 9]
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Πρόσβαση στα στοιχεία ενός numpy array}
+\PYG{c+c1}{\PYGZsh{} το πρώτο στοιχείο ξεκινάει στο 0}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{v}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{n}{end}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{v}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} υπάρχει και η δυνατότητα πρόσβασης στοιχείων από το τέλος με αρνητικούς δείκτες}
+\PYG{c+c1}{\PYGZsh{} το τελευταίο στοιχείο έχει δείκτη \PYGZhy{}1 το προτελευταλιο \PYGZhy{}2 κ.ο.κ.}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{v}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{n}{end}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{v}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+1 5
+9 5
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Τα numpy arrays προσφέρουν και δυνατότητες τεμαχισμού (slicing)}
+\PYG{c+c1}{\PYGZsh{} το απλό slicing u[start:end] ξεκινάει από το στοιχείο}
+\PYG{c+c1}{\PYGZsh{} στη θέση start και φτάνει στη θέση end (χωρίς να την περιέχει)}
+\PYG{c+c1}{\PYGZsh{} αν η αρχή ή το τέλος παραληφθεί, αυτά λαμβάνονται η αρχή ή το τέλος του πίνακα}
+\PYG{c+c1}{\PYGZsh{} επίσης μπορεί να χρησιμοποιηθεί και βήμα με την μορφή u[start:end:step]}
+
+\PYG{n}{u}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{l+m+mi}{9}\PYG{p}{,}\PYG{l+m+mi}{7}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{u}\PYG{p}{[}\PYG{p}{:}\PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{u}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{:}\PYG{p}{]}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{u}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{l+m+mi}{5}\PYG{p}{]}\PYG{p}{)}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{u}\PYG{p}{[}\PYG{p}{:}\PYG{p}{:}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+[1 5 9]
+[9 7 3 2]
+[5 9 7 3]
+[1 9 3]
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Προσσοχή, όταν θέλουμε να εξάγουμε από έναν πίνακα ένα συγκερκιμένο τεμάχιο}
+\PYG{c+c1}{\PYGZsh{} όπως παρακάτω, τα δύο numpy arrays είναι σενδεδεμένα, δηλ. ο,τι αλλάζει στο ένα}
+\PYG{c+c1}{\PYGZsh{} αλλάζει και στο άλλο}
+\PYG{n}{u\PYGZus{}slice1} \PYG{o}{=} \PYG{n}{u}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{:}\PYG{l+m+mi}{5}\PYG{p}{]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{τεμάχιο:                       }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{u\PYGZus{}slice1}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{αρχικός πίνακας:               }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{u}\PYG{p}{)}
+\PYG{n}{u\PYGZus{}slice1}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{8}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{τεμάχιο μετά από αλλαγή:       }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{u\PYGZus{}slice1}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{αρχικός πίνακα μετά από αλλαγή:}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{u}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Όποτε θέλουμε να το αποφύγουμε αυτό χρησιμοποιούμε το .copy()}
+\PYG{n}{u\PYGZus{}slice2} \PYG{o}{=} \PYG{n}{u}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{:}\PYG{l+m+mi}{5}\PYG{p}{]}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{u\PYGZus{}slice2}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{9}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{τεμάχιο με .copy() μετά από αλλαγή:       }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{u\PYGZus{}slice2}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{αρχικός πίνακα μετά από αλλαγή με .copy():}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{u}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+τεμάχιο:                        [9 7 3]
+αρχικός πίνακας:                [1 5 9 7 3 2]
+τεμάχιο μετά από αλλαγή:        [8 7 3]
+αρχικός πίνακα μετά από αλλαγή: [1 5 8 7 3 2]
+
+τεμάχιο με .copy() μετά από αλλαγή:        [9 7 3]
+αρχικός πίνακα μετά από αλλαγή με .copy(): [1 5 8 7 3 2]
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Δημιουργείστε έναν πίνακα πραγματικών τιμών:}
+\PYG{c+c1}{\PYGZsh{} Στο MATLAB: a = a=[[1,2,3];[4,5,6];[7,8,9]] ή a=[1,2,3;4,5,6;7,8,9]}
+\PYG{n}{a}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,}\PYG{p}{[}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{l+m+mi}{6}\PYG{p}{]}\PYG{p}{,}\PYG{p}{[}\PYG{l+m+mi}{7}\PYG{p}{,}\PYG{l+m+mi}{8}\PYG{p}{,}\PYG{l+m+mi}{9}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{a =}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{a}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+a = [[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Αθροίστε}
+
+\PYG{n}{a}\PYG{o}{+}\PYG{l+m+mi}{5}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+array([[ 6,  7,  8],
+       [ 9, 10, 11],
+       [12, 13, 14]])
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}Πολλαπλασιάστε}
+
+\PYG{n}{b}\PYG{o}{=}\PYG{n}{s}\PYG{o}{*}\PYG{n}{v}\PYG{o}{*}\PYG{l+m+mi}{2}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{b =}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{b}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+b = [ 4 20 36]
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Πολλαπλασιάστε στοιχείο\PYGZhy{}προς\PYGZhy{}στοιχείο (elementwise)}
+\PYG{c+c1}{\PYGZsh{} MATLAB: v.*b}
+
+\PYG{n}{np}\PYG{o}{.}\PYG{n}{multiply}\PYG{p}{(}\PYG{n}{v}\PYG{p}{,}\PYG{n}{b}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+array([  4, 100, 324])
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}Ελέγξτε το μήκος ενός διανύσματος}
+\PYG{c+c1}{\PYGZsh{} MATLAB: length(v)}
+
+\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{v}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+3
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Ελέγξτε το μέγεθος ενός πίνακα}
+\PYG{c+c1}{\PYGZsh{} MATLAB: size(a)}
+
+\PYG{n}{a}\PYG{o}{.}\PYG{n}{shape}   \PYG{c+c1}{\PYGZsh{} για array: np.array(a.shape)}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+(3, 3)
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Προσπελάστε συγκεκριμένα στοιχεία ενός πίνακα}
+\PYG{c+c1}{\PYGZsh{} Η δεικτοδότηση αρχίζει από το 0. }
+\PYG{c+c1}{\PYGZsh{} MATLAB: a(1,2)  }
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{} ΠΡΟΣΟΧΗ, στο MATLAB η δεικτοδ΄ότηση αρχ΄ίζει από το 1!}
+
+\PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{]}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+2
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Προσπελάστε συγκεκριμένα στοιχεία ενός πίνακα (συνέχεια)}
+\PYG{c+c1}{\PYGZsh{} Αρνητικές τιμές μετρούν από το τέλος, π.χ. το \PYGZhy{}1 }
+\PYG{c+c1}{\PYGZsh{} αναφέρεται στο τελευταίο στοιχείο)}
+
+\PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+6
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Προσπελάστε συγκεκριμένο τμήμα ενός διανύσματος}
+\PYG{c+c1}{\PYGZsh{} MATLAB: v(1:9)}
+
+\PYG{n}{v}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{l+m+mi}{3}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} ΠΡΟΣΟΧΗ: τα στοιχεία [2ο,3ο] δίνονται ως 1:3 και όχι ως 1:2}
+\PYG{c+c1}{\PYGZsh{} Δοκιμάστε το v[1:2]...}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+array([5, 9])
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Προσπελάστε συγκεκριμένα τμήματα ενός πίνακα}
+
+\PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{:}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{p}{:}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} Ομοίως: οι γραμμές 1 \PYGZam{} 2 δίνονται ως 0:2 και όχι ως 0:1}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+array([[1, 2, 3],
+       [4, 5, 6]])
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Δημιουργήστε ένα διάνυσμα με στοιχεία από το 0 έως το 0.5 και βήμα 0.1}
+\PYG{c+c1}{\PYGZsh{} MATLAB: t=(0:0.1:0.4)}
+
+\PYG{n}{t}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mf}{0.5}\PYG{p}{,}\PYG{l+m+mf}{0.1}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{t=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{t}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+t= [0.  0.1 0.2 0.3 0.4]
+\end{sphinxVerbatim}
+
+
+\subsubsection*{Μέρος 2:  Δειγματοληψία \sphinxhyphen{} Ψηφιοποίηση}
+\label{\detokenize{Exercise1_2:id1}}\label{\detokenize{Exercise1_2::doc}}
+
+\bigskip\hrule\bigskip
+
+
+\sphinxAtStartPar
+Τα πρωτογενή σήματα είναι κυρίως αναλογικά (συνεχούς χρόνου). Για να τα παραστήσουμε και επεξεργαστούμε στον υπολογιστή μας (ή άλλη ψηφιακή μηχανή) θα πρέπει πρώτα να τα ψηφιοποιήσουμε. Υποθέστε ένα σήμα συνεχούς χρόνου \(x(t)\) με μετασχηματισμό Fourier (Continuous Time Fourier Transform – CTFT):
+\(X(f)=\int_{-\infty}^{\infty} x(t)e^{-j2\pi ft} dt\)
+\sphinxincludegraphics{{1_1}.png}
+
+\sphinxAtStartPar
+Λαμβάνοντας δείγματα του \(x(t)\) με ρυθμό \(f_s=1/T_s\) παράγεται σήμα διακριτού χρόνου \(x(nT_s)\). Μαθηματικά το αναπαριστάνουμε ως σειρά συναρτήσεων δέλτα
+\begin{equation*}
+\begin{split}x_\delta (t)=\sum_{n=-\infty}^{\infty}x(nT_s)\delta(t-nT_s)=x(t\sum_{n=-\infty}^{\infty}\delta(t-nT_s)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+με μετασχηματισμό Fourier
+\begin{equation*}
+\begin{split}X_\delta (f)=\sum_{n=-\infty}^{\infty}x(nT_s)e^{-j2\pi fnT_s}=X(f)*1/T_s\sum_{n=-\infty}^{\infty}\delta(f-k/T_s)=1/T_s\sum_{n=-\infty}^{\infty}X(f-k/T_s)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+που είναι περιοδική συνάρτηση.
+\newline
+\sphinxincludegraphics{{1.2}.png}
+
+\sphinxAtStartPar
+Για βαθυπερατά σήματα \(x(t)\) εύρους ζώνης W, με την υπόθεση ότι ο ρυθμός δειγματοληψίας \(fs ≥
+2W\), ισχύει ότι \(X(f) = T_s X_\delta(f)\), \(0 ≤ f ≤ W\), δηλαδή, το σήμα \(X(f)\) προκύπτει μετά από διάβαση του
+δειγματοληπτημένου \(x_\delta(t)\) μέσω ιδανικού βαθυπερατού φίλτρου κέρδους \(T_s\). Από το προηγούμενο
+σχήμα γίνεται φανερό ότι εάν η δειγματοληψία γίνει με συχνότητα μικρότερη του διπλασίου της
+ανώτερης συχνότητας \(W\) του σήματος (υποδειγμάτιση – undersampling), τότε εμφανίζονται στην
+περιοχή συχνοτήτων του σήματος «είδωλα» φάσματος από ανώτερες συχνότητες που δεν
+επιτρέπουν την ακριβή αποκατάσταση του αρχικού σήματος συνεχούς χρόνου. Το φαινόμενο αυτό
+ονομάζεται \sphinxstylestrong{αναδίπλωση} ή \sphinxstylestrong{επικάλυψη} (aliasing), το δε σφάλμα κατά την αποκατάσταση του
+αρχικού σήματος αποκαλείται σφάλμα αναδίπλωσης (aliasing error).
+Η δειγματοληψία στο πεδίο του χρόνου αποτελεί τη βάση για τον ορισμό του μετασχηματισμού
+Fourier διακριτού χρόνου (Discrete Time Fourier Transform – DTFT). Για μια σειρά διακριτών
+αριθμών \(x[n]\), ο μετασχηματισμός Fourier διακριτού χρόνου ορίζεται ως:
+\(X_\delta (\phi)\triangleq\sum_{n=-\infty}^{\infty}x[n]e^{-j2\pi n\phi}\)
+
+\sphinxAtStartPar
+O DTFT είναι περιοδική συνάρτηση με περίοδο \(1\), επομένως, αρκεί ο υπολογισμός του στο
+διάστημα συχνοτήτων \([0,1]\) ή ισοδύναμα \([-½,½]\). Να σημειωθεί ότι ο DTFT, παρότι προκύπτει από
+μια σειρά διακριτών αριθμών \(x[n]\), είναι συνεχής συνάρτηση της μεταβλητής \(\phi\) όπως παραστατικά
+φαίνεται στο επόμενο σχήμα.
+\sphinxincludegraphics{{1.4}.png}
+
+\sphinxAtStartPar
+Με τη σειρά των διακριτών αριθμών να προκύπτει ως αποτέλεσμα δειγματοληψίας, \(x[n]=x(nT_s)\), ο
+DTFT και ο μετασχηματισμός Fourier \(X_\delta(f)\) του δειγματοληπτημένου σήματος συνδέονται μέσω
+της αντιστοιχίας \(\phi ↔ f/f_s\). Η συνήθης πρακτική είναι να παριστάνουμε τον λόγο \(f/f_s\) ως
+κανονικοποιημένη συχνότητα \(\phi\) (\(f_D\), στις σημειώσεις σας) και οι πραγματικές συχνότητες να
+προκύπτουν ως πολλαπλάσιά της (συνήθως κλασματικά). Για τη σύνδεση του DTFT με τον μετασχηματισμό Fourier \(X(f)\) του σήματος πρέπει επιπλέον να γίνει αναγωγή στην περίοδο δειγματοληψίας με πολλαπλασιασμό επί \(T_s\) (ή διαίρεση με \(f_s\)).
+Κατ΄ αναλογία με τη δειγματοληψία σημάτων στο χρόνο μπορούμε να κάνουμε δειγματοληψία στο
+πεδίο της συχνότητας λαμβάνοντας διακριτές τιμές \(X(kf_o)\) του μετασχηματισμού Fourier που
+αντιστοιχούν σε ανάλυση συχνότητας \(f_o=1/T_o\). Αυτό ισοδυναμεί με περιοδική επανάληψη του
+σήματος συνεχούς χρόνου \(x(t)\) κάθε \(Τ_ο\), αφού το περιοδικό σήμα
+\(x_p (t)=\sum_{n=-\infty}^{\infty}x(t-nT_o)\)
+
+\sphinxAtStartPar
+έχει μετασχηματισμό Fourier
+\begin{equation*}
+\begin{split}X(f)\sum_{n=-\infty}^{\infty}e^{-j2\pi f n T_o}= X(f)\frac{1}{T_o}\sum_{k=-\infty}^{\infty}\delta(f-\frac{k}{T_o})=\frac{1}{T_o}\sum_{k=-\infty}^{\infty}X(\frac{k}{T_o})\delta(f-\frac{k}{T_o})\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Επομένως, \(X[k] = X(kf_o)/Τ_o\) είναι οι συντελεστές του αναπτύγματος σε σειρά Fourier.του περιοδικού
+σήματος \(x_p(t)\). Προφανώς, για σήματα \(x(t)\) πεπερασμένης διάρκειας, όπου \(x(t)=0\) για \(|t| ≥ T\), με την
+υπόθεση ότι η περίοδος \(T_o ≥ 2T\), ισχύει ότι \(x(t) = x_p(t)\) για \(|t| ≤ T\).
+Στην πράξη, τα σήματα έχουν πολύ μεγάλη διάρκεια για να μπορέσουμε να τα αναλύσουμε στην
+ολότητά τους. Έτσι εφαρμόζουμε ένα ορθογωνικό χρονικό παράθυρο, ώστε να διατηρήσουμε μόνο
+το πιο σημαντικό τους μέρος για το διάστημα παρατήρησης και \(x(t)= 0\), αλλού. Κατά τον
+υπολογισμό του DTFT \(X_d(\phi)\) ενός τέτοιου ακρωτηριασμένου σήματος, αντί του απείρου
+αθροίσματος, περιοριζόμαστε σε μια πεπερασμένου μήκους \(L\) σειρά αριθμών \(x[n]\), οπότε
+\begin{equation*}
+\begin{split}X_d (\phi)=\sum_{n=0}^{L-1}x[n]e^{-j2\pi n\phi}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+H δειγματοληψία του \(X_d(\phi)\) στο πεδίο συχνότητας σε \(Ν\) ισαπέχουσες κανονικοποιημένες συχνότητες \(0\), \(1/Ν\), \(2/Ν\), \(…\), \((Ν-1)/Ν\), δίνει
+\begin{equation*}
+\begin{split}X[k]=X_d (\frac{k}{N})=\sum_{n=0}^{N-1}x[n]e^{-j2\pi n\frac{k}{N}}, 0\leq k \leq N-1\end{split}
+\end{equation*}
+\sphinxAtStartPar
+όπου, εάν \(N≥L\), θέτουμε \(x[n]=0\) για \(n≥L\). Η τελευταία σχέση αναγνωρίζεται ως ο διακριτός μετασχηματισμός Fourier (Discrete Fourier Transform – DFT), ο οποίος για μια πεπερασμένη σειρά \(xn\), \(n=0\), \(1\), \(…\), \(N-1\), ορίζεται ως:
+\begin{equation*}
+\begin{split}X_k\triangleq \sum_{n=0}^{N-1}x_n e^{-j2\pi n\frac{k}{N}}, 0\leq k \leq N-1\end{split}
+\end{equation*}
+\sphinxAtStartPar
+και ο αντίστροφός του είναι
+\begin{equation*}
+\begin{split}x_n= \frac{1}{N} \sum_{k=0}^{N-1}X_k e^{-j2\pi n\frac{k}{N}}, 0\leq n \leq N-1\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Η \(X_d(\phi)\) ως DTFT είναι περιοδική συνάρτηση και εάν η αρχική σειρά xn ήταν περιοδική (και δεν
+εφαρμόζαμε το παράθυρο), τότε η \(X_d(\phi)\) θα ήταν μηδέν παντού εκτός των σημείων της
+δειγματοληψίας \(k/Ν\). Δηλαδή, εάν θεωρήσουμε μια πεπερασμένου μήκους σειρά αριθμών που
+επαναλαμβάνεται περιοδικά, o διακριτού χρόνου μετασχηματισμός Fourier της (DTFT) είναι και
+αυτός περιοδικός και διακριτός. Επιπλέον, ο DFT και ο αντίστροφός του IDFT, εάν δεν
+περιορίζαμε τους δείκτες \(n\) και \(k\) μεταξύ \(0\) και \(N-1\), θα ήταν περιοδικές συναρτήσεις. Άρα η
+πεπερασμένη σειρά xn μπορεί να θεωρηθεί ως ένα περιοδικό σήμα διακριτού χρόνου ιδωμένο μόνο
+κατά τη διάρκεια μιας περιόδου και ο DFT, η σειρά \(X_k\), ως τα δείγματα με ανάλυση \(1/Ν\) του DTFT
+\(X_d(\phi)\) στο πεδίο κανονικοποιημένων συχνοτήτων \([0,1]\), όπως φαίνεται στο επόμενο σχήμα.
+
+\sphinxAtStartPar
+\sphinxincludegraphics{{1.4}.png}
+
+
+\paragraph{Φασματική Ανάλυση}
+\label{\detokenize{Exercise1_2:id2}}
+\sphinxAtStartPar
+Για τον υπολογισμό της ενέργειας ή ισχύος της κυματομορφής \(x(t)\), ανάλογα με την περίπτωση
+σήματος, ισχύει
+\begin{equation*}
+\begin{split}E_x= \int_{-\infty}^{\infty} x^2(t) dt = \int_{-\infty}^{\infty} |X(f)|^2 df\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}P_x= \lim_{T\to\infty} \frac{1}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} x^2(t) dt = \int_{-\infty}^{\infty} S_X(f) df\end{split}
+\end{equation*}
+\sphinxAtStartPar
+όπου για σήματα ισχύος \(S_Χ(f)\) είναι η πυκνότητα φάσματος ισχύος (Power Spectral Density – PSD)
+της \(x(t)\). Για σήματα διακριτού χρόνου που προκύπτουν από δειγματοληψία της \(x(t)\) με περίοδο \(T_s\),
+οι αντίστοιχες σχέσεις υπολογισμό της ενέργειας ή ισχύος γίνονται
+\begin{equation*}
+\begin{split}E_x= T_s\sum_{n=-\infty}^{\infty} x^2[n]\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}P_x= \lim_{N\to\infty} \frac{1}{2N+1} \sum_{n=-N}^{N} x^2[n]\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Ένας απλός τρόπος να εκτιμηθεί η πυκνότητα φάσματος ισχύος της κυματομορφής \(x(t)\) είναι να
+ληφθεί ο DTFT των δειγμάτων του σήματος και μετά να υψωθεί στο τετράγωνο το μέτρο του
+αποτελέσματος. Αυτός ο εκτιμητής αποκαλείται περιοδόγραμμα (periodogram). Το περιοδόγραμμα
+ενός πεπερασμένου μήκους \(L\) σήματος \(x[n]\) ορίζεται ως
+\begin{equation*}
+\begin{split}P_{xx}(f)\triangleq \frac{|X_d(\frac{f}{f_s})| ^2}{f_sL}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+όπου \(X_d(\phi)\) o DTFT του σήματος. Με το μήκος \(L\) να τείνει στο άπειρο, το περιοδόγραμμα \(P_{xx}(f)\)
+τείνει στην πυκνότητα φάσματος ισχύος \(S_Χ(f)\). Ο υπολογισμός του περιοδογράμματος σε
+πεπερασμένο πλήθος συχνοτήτων \(kf_s/Ν\), \(k=0\), \(1\), \(…\) , \(Ν\) δίνει
+\begin{equation*}
+\begin{split}P_{xx}[k]=\frac{|X_k| ^2}{f_sL} , k=0, 1, ...,N-1\end{split}
+\end{equation*}
+\sphinxAtStartPar
+όπου \(X_k\) και ο DFT της πεπερασμένου μήκους \(L\) σειράς δειγμάτων του σήματος. Η ισχύς του
+σήματος είναι τότε
+\begin{equation*}
+\begin{split}P_{X}=\frac{1}{f_sL} \sum_{k=0}^{N-1} |X_k|^2f_o =\frac{1}{NL} \sum_{k=0}^{N-1} |X_k|^2 = \frac{1}{L}\sum_{n=0}^{L-1} |x_n|^2\end{split}
+\end{equation*}
+\sphinxAtStartPar
+όπου η τελευταία ισότητα προκύπτει από το θεώρημα Parseval, που για την περίπτωση του DFT
+εκφράζεται ως:
+\begin{equation*}
+\begin{split} \sum_{n=0}^{N-1} |x_n|^2 = \frac{1}{N} \sum_{k=0}^{N-1} |X_k|^2\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Στην ειδική περίπτωση περιοδικών σημάτων έχουμε
+\begin{equation*}
+\begin{split}S_X(f)=\sum_{k=-\infty}^{\infty} |X[k]|^2\delta(f-\frac{k}{T_o})\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}P_X(f)=\sum_{k=-\infty}^{\infty} |X[k]|^2\end{split}
+\end{equation*}
+\sphinxAtStartPar
+όπου \(X[k]\) οι συντελεστές του αναπτύγματος σε σειρά Fourier και \(T_o\) η περίοδος του σήματος.
+
+
+\subsubsection*{Μέρος 3:  Εφαρμογή Α}
+\label{\detokenize{Exercise1_3:id1}}\label{\detokenize{Exercise1_3::doc}}
+
+\bigskip\hrule\bigskip
+
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{Fs} \PYG{o}{=} \PYG{l+m+mi}{1000}  \PYG{c+c1}{\PYGZsh{} συχνότητα δειγματοληψίας 1000 Hz}
+\PYG{n}{Ts} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{n}{Fs}  \PYG{c+c1}{\PYGZsh{} περίοδος δειγματοληψίας}
+\PYG{n}{L} \PYG{o}{=} \PYG{l+m+mi}{1000}  \PYG{c+c1}{\PYGZsh{} μήκος σήματος (αριθμός δειγμάτων)}
+\PYG{n}{T} \PYG{o}{=} \PYG{n}{L} \PYG{o}{*} \PYG{n}{Ts}  \PYG{c+c1}{\PYGZsh{} διάρκεια σήματος}
+\PYG{n}{t} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{p}{(}\PYG{n}{L} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{*} \PYG{n}{Ts}\PYG{p}{,} \PYG{n}{Ts}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} χρονικές στιγμές υπολογισμού του σήματος}
+
+\PYG{n}{x} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{pi} \PYG{o}{*} \PYG{l+m+mi}{30} \PYG{o}{*} \PYG{n}{t}\PYG{p}{)} \PYGZbs{}
+    \PYG{o}{+} \PYG{l+m+mf}{0.8} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{pi} \PYG{o}{*} \PYG{l+m+mi}{80} \PYG{o}{*} \PYG{p}{(}\PYG{n}{t} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{)} \PYGZbs{}
+    \PYG{o}{+} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{pi} \PYG{o}{*} \PYG{l+m+mi}{60} \PYG{o}{*} \PYG{n}{t}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} συνιστώσα 60 Hz}
+
+\PYG{c+c1}{\PYGZsh{} Σχεδιάστε το σήμα στο πεδίο του χρόνου}
+
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{t}\PYG{p}{,} \PYG{n}{x}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{n}{xlabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{t (sec)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{ylabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Amplitude}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
+       \PYG{n}{title}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Time domain plot of x}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{axis}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mf}{0.2}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.5}\PYG{p}{,} \PYG{l+m+mf}{2.5}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{savefig}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Time domain plot of x}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+
+
+\PYG{c+c1}{\PYGZsh{} Υπολογίστε τον διακριτό μετασχηματισμό Fourier}
+
+\PYG{k}{def} \PYG{n+nf}{nextpow2}\PYG{p}{(}\PYG{n}{i}\PYG{p}{)}\PYG{p}{:}  \PYG{c+c1}{\PYGZsh{} επιστρέφει το n, τέτοιο ώστε 2\PYGZca{}n \PYGZgt{}= L}
+    \PYG{n}{n} \PYG{o}{=} \PYG{l+m+mi}{0}
+
+    \PYG{k}{while} \PYG{l+m+mi}{2} \PYG{o}{*}\PYG{o}{*} \PYG{n}{n} \PYG{o}{\PYGZlt{}} \PYG{n}{i}\PYG{p}{:}
+        \PYG{n}{n} \PYG{o}{+}\PYG{o}{=} \PYG{l+m+mi}{1}
+
+    \PYG{k}{return} \PYG{n}{n}
+
+
+\PYG{n}{N} \PYG{o}{=} \PYG{l+m+mi}{2} \PYG{o}{*}\PYG{o}{*} \PYG{n}{nextpow2}\PYG{p}{(}\PYG{n}{L}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} μήκος μετασχηματισμού Fourier.}
+\PYG{c+c1}{\PYGZsh{} η nextpow2 βρίσκει τη δύναμη του 2 που}
+\PYG{c+c1}{\PYGZsh{} είναι μεγαλύτερη ή ίση από το όρισμα L}
+\PYG{n}{Fo} \PYG{o}{=} \PYG{n}{Fs} \PYG{o}{/} \PYG{n}{N}  \PYG{c+c1}{\PYGZsh{} ανάλυση συχνότητας}
+\PYG{n}{f} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{N}\PYG{p}{)} \PYG{o}{*} \PYG{n}{Fo}  \PYG{c+c1}{\PYGZsh{} διάνυσμα συχνοτήτων}
+\PYG{n}{X} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{fft}\PYG{o}{.}\PYG{n}{fft}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{N}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} αριθμητικός υπολογισμός του διακριτού μετασχηματισμού Fourier (DFT) για Ν σημεία}
+
+\PYG{c+c1}{\PYGZsh{} Σχεδιάστε το σήμα στο πεδίο συχνότητας}
+
+\PYG{c+c1}{\PYGZsh{} Αφού το σήμα είναι πραγματικό μπορείτε να σχεδιάσετε μόνο τις θετικές συχνότητες}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{f}\PYG{p}{[}\PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{N}\PYG{p}{)}\PYG{p}{]}\PYG{p}{,} \PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{X}\PYG{p}{[}\PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{N}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{n}{xlabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{f (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{ylabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Amplitude}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
+       \PYG{n}{title}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Frequency domain plot of x}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{savefig}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Frequency domain plot of x}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{n}{f} \PYG{o}{=} \PYG{n}{f} \PYG{o}{\PYGZhy{}} \PYG{n}{Fs} \PYG{o}{/} \PYG{l+m+mi}{2}  \PYG{c+c1}{\PYGZsh{} ολίσθηση συχνοτήτων προς τα αριστερά κατά –Fs/2}
+\PYG{n}{X} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{fft}\PYG{o}{.}\PYG{n}{fftshift}\PYG{p}{(}\PYG{n}{X}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} ολίσθηση της μηδενικής συχνότητας στο κέντρο του φάσματος}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mi}{12}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{X}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{n}{xlabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{f (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{ylabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Amplitude}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
+       \PYG{n}{title}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Two sided spectrum of x}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{savefig}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Two sided spectrum of x}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Υπολογίστε την ισχύ}
+
+\PYG{n}{power} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{multiply}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{conj}\PYG{p}{(}\PYG{n}{X}\PYG{p}{)}\PYG{p}{)} \PYG{o}{/} \PYG{n}{N} \PYG{o}{/} \PYG{n}{L}  \PYG{c+c1}{\PYGZsh{} υπολογισμός πυκνότητας ισχύος}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mi}{12}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n}{power}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{n}{xlabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Frequency (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{ylabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Power}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
+       \PYG{n}{title}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Periodogram}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{savefig}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Periodogram}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise1_3_2_0}.png}
+
+\noindent\sphinxincludegraphics{{Exercise1_3_2_1}.png}
+
+\noindent\sphinxincludegraphics{{Exercise1_3_2_2}.png}
+
+\noindent\sphinxincludegraphics{{Exercise1_3_2_3}.png}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Part 2 Προσθέστε θόρυβο στο σήμα}
+
+\PYG{c+c1}{\PYGZsh{} Συμπληρώστε τον κώδικα για τη δημιουργία του σήματος θορύβου n με τη βοήθεια της συνάρτησης randn.}
+\PYG{c+c1}{\PYGZsh{} Το διάνυσμα θορύβου n θα πρέπει να είναι του ίδιου μεγέθους με αυτό της ημιτονοειδούς κυματομορφής x του πρώτου μέρους.}
+\PYG{c+c1}{\PYGZsh{} Σχεδιάστε το σήμα θορύβου στο διάστημα από 0 έως 0.2 sec και κλίμακα σε από \PYGZhy{}2 έως 2.}
+\PYG{c+c1}{\PYGZsh{} Υπολογίστε το περιοδόγραμμα του n και σχεδιάστε την πυκνότητα φάσματος ισχύος του σήματος θορύβου.}
+\PYG{c+c1}{\PYGZsh{} Προσθέστε το σήμα θορύβου και το x για να λάβετε το σήμα με θόρυβο s.}
+\PYG{c+c1}{\PYGZsh{} Σχεδιάσατε το σήμα με θόρυβο s στο πεδίο του χρόνου στην περιοχή 0 έως 0.2 sec }
+\PYG{c+c1}{\PYGZsh{} και κλίμακα από \PYGZhy{}2 έως 2 καθώς και το αμφίπλευρο φάσμα του.}
+
+\PYG{n}{rand\PYGZus{}n} \PYG{o}{=} \PYG{n}{random}\PYG{o}{.}\PYG{n}{randn}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{size}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{t}\PYG{p}{,}\PYG{n}{rand\PYGZus{}n}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{n}{xlabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{t (sec)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{ylabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Amplitude}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
+       \PYG{n}{title}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Time domain plot of n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{axis}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mf}{0.2}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{n}{N} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{o}{\PYGZca{}}\PYG{n}{nextpow2}\PYG{p}{(}\PYG{n}{L}\PYG{p}{)}
+\PYG{n}{Fo}\PYG{o}{=}\PYG{n}{Fs}\PYG{o}{/}\PYG{n}{N}           
+\PYG{n}{f}\PYG{o}{=}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n}{N}\PYG{p}{)}\PYG{p}{)}\PYG{o}{*}\PYG{n}{Fo}     
+\PYG{n}{rand\PYGZus{}N}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{fft}\PYG{o}{.}\PYG{n}{fft}\PYG{p}{(}\PYG{n}{rand\PYGZus{}n}\PYG{p}{,}\PYG{n}{N}\PYG{p}{)}   
+          
+\PYG{n}{f}\PYG{o}{=}\PYG{n}{f}\PYG{o}{\PYGZhy{}}\PYG{n}{Fs}\PYG{o}{/}\PYG{l+m+mi}{2}
+\PYG{n}{rand\PYGZus{}N}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{fft}\PYG{o}{.}\PYG{n}{fftshift}\PYG{p}{(}\PYG{n}{rand\PYGZus{}N}\PYG{p}{)}     
+
+\PYG{n}{power\PYGZus{}n}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{multiply}\PYG{p}{(}\PYG{n}{rand\PYGZus{}N}\PYG{p}{,}\PYG{n}{np}\PYG{o}{.}\PYG{n}{conj}\PYG{p}{(}\PYG{n}{rand\PYGZus{}N}\PYG{p}{)}\PYG{p}{)}\PYG{o}{/}\PYG{n}{N}\PYG{o}{/}\PYG{n}{L}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,}\PYG{n}{power\PYGZus{}n}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{n}{xlabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Frequency (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{ylabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Power}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
+       \PYG{n}{title}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Periodogram of n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{n}{s} \PYG{o}{=} \PYG{n}{x} \PYG{o}{+} \PYG{n}{rand\PYGZus{}n}
+
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{t}\PYG{p}{,}\PYG{n}{s}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{n}{xlabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{t (sec)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{ylabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Amplitude}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
+       \PYG{n}{title}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Time domain plot of s}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{axis}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mf}{0.2}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}                  
+
+\PYG{n}{N} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{o}{\PYGZca{}}\PYG{n}{nextpow2}\PYG{p}{(}\PYG{n}{L}\PYG{p}{)}  
+                   
+\PYG{n}{Fo}\PYG{o}{=}\PYG{n}{Fs}\PYG{o}{/}\PYG{n}{N}           
+\PYG{n}{f}\PYG{o}{=}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n}{N}\PYG{p}{)}\PYG{p}{)}\PYG{o}{*}\PYG{n}{Fo}      
+\PYG{n}{S}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{fft}\PYG{o}{.}\PYG{n}{fft}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,}\PYG{n}{N}\PYG{p}{)}       
+                             
+\PYG{n}{f}\PYG{o}{=}\PYG{n}{f}\PYG{o}{\PYGZhy{}}\PYG{n}{Fs}\PYG{o}{/}\PYG{l+m+mi}{2}       
+\PYG{n}{S}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{fft}\PYG{o}{.}\PYG{n}{fftshift}\PYG{p}{(}\PYG{n}{S}\PYG{p}{)}    
+                  
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,}\PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{S}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{n}{xlabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{f (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{ylabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Amplitude}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
+       \PYG{n}{title}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Two sided spectrum of s}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise1_3_3_0}.png}
+
+\noindent\sphinxincludegraphics{{Exercise1_3_3_1}.png}
+
+\noindent\sphinxincludegraphics{{Exercise1_3_3_2}.png}
+
+\noindent\sphinxincludegraphics{{Exercise1_3_3_3}.png}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Part 3. Πολλαπλασιασμός σημάτων}
+
+\PYG{c+c1}{\PYGZsh{} Συμπληρώστε τον κώδικα δημιουργίας ενός ημιτονοειδούς σήματος συχνότητας}
+\PYG{c+c1}{\PYGZsh{} 100 Hz και πολλαπλασιάστε με το προηγούμενο σήμα s.}
+\PYG{c+c1}{\PYGZsh{} Τα δύο σήματα θα πρέπει να είναι του ίδιου μεγέθους.}
+\PYG{c+c1}{\PYGZsh{} Σχεδιάστε το αποτέλεσμα στο πεδίο του χρόνου στην περιοχή 0 έως 0.2 sec}
+\PYG{c+c1}{\PYGZsh{} και κλίμακα από \PYGZhy{}2 έως 2 καθώς και στο πεδίο της συχνότητας}
+\PYG{c+c1}{\PYGZsh{} χρησιμοποιώντας τη συνάρτηση fftshift.}
+
+
+\PYG{n}{s\PYGZus{}mul} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{pi} \PYG{o}{*} \PYG{l+m+mi}{100} \PYG{o}{*} \PYG{n}{t}\PYG{p}{)}
+\PYG{n}{s\PYGZus{}final} \PYG{o}{=} \PYG{n}{s} \PYG{o}{*} \PYG{n}{s\PYGZus{}mul}
+
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{t}\PYG{p}{,} \PYG{n}{s\PYGZus{}final}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{n}{xlabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{t (sec)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{ylabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Amplitude}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
+       \PYG{n}{title}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Time domain plot of s * sin(2pi*100t)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{axis}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mf}{0.2}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{savefig}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Time domain plot of s * sin(2pi*100t)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{n}{N} \PYG{o}{=} \PYG{l+m+mi}{2} \PYG{o}{*}\PYG{o}{*} \PYG{n}{nextpow2}\PYG{p}{(}\PYG{n}{L}\PYG{p}{)}
+
+\PYG{n}{Fo} \PYG{o}{=} \PYG{n}{Fs} \PYG{o}{/} \PYG{n}{N}
+\PYG{n}{f} \PYG{o}{=} \PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{N}\PYG{p}{)}\PYG{p}{)} \PYG{o}{*} \PYG{n}{Fo}
+\PYG{n}{S\PYGZus{}final} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{fft}\PYG{o}{.}\PYG{n}{fft}\PYG{p}{(}\PYG{n}{s\PYGZus{}final}\PYG{p}{,} \PYG{n}{N}\PYG{p}{)}
+
+\PYG{n}{f} \PYG{o}{=} \PYG{n}{f} \PYG{o}{\PYGZhy{}} \PYG{n}{Fs} \PYG{o}{/} \PYG{l+m+mi}{2}
+\PYG{n}{S\PYGZus{}final} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{fft}\PYG{o}{.}\PYG{n}{fftshift}\PYG{p}{(}\PYG{n}{S\PYGZus{}final}\PYG{p}{)}
+
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{S\PYGZus{}final}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{n}{xlabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{f (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{ylabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Amplitude}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
+       \PYG{n}{title}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Two sided spectrum of s * sin(2pi*100t)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{savefig}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Two sided spectrum of s * sin(2pi*100t)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise1_3_4_0}.png}
+
+\noindent\sphinxincludegraphics{{Exercise1_3_4_1}.png}
+
+
+\subsubsection*{Μέρος 4:  Εφαρμογή Β}
+\label{\detokenize{Exercise1_4:id1}}\label{\detokenize{Exercise1_4::doc}}
+
+\bigskip\hrule\bigskip
+
+
+\sphinxAtStartPar
+Να γραφεί σε Python συνάρτηση φασματικής ανάλυσης, παρόμοια με την \sphinxcode{\sphinxupquote{signal.welch()}}: θα δέχεται ως είσοδο διάνυσμα πραγματικού σήματος καθώς και τη συχνότητα δειγματοληψίας, \(F_s\), και θα σχεδιάζει τη μονόπλευρη φασματική πυκνότητα του σήματος στην περιοχή \([0-F_s/2)\). Το σήμα θα τεμαχίζεται σε τμήματα μήκους ίσου με τη δύναμη του \(2\) την πλησιέστερη στο \(1/8\) του συνολικού του μήκους, αλλά όχι μικρότερου από 256. Τα τμήματα θα είναι επικαλυπτόμενα κατά \(50\%\). Το τελευταίο τμήμα, εάν υπολείπεται σε μήκος των άλλων, θα αγνοείται. Θα υπολογίζεται με FFT το φάσμα κάθε τμήματος και θα λαμβάνεται η μέση τιμή όλων των τμημάτων. Η συνάρτηση να δοκιμαστεί με το σήμα του παραδείγματος 1.1 και να συγκριθεί το αποτέλεσμα με το αντίστοιχο της \sphinxcode{\sphinxupquote{signal.welch()}}.
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{pwelch}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{Fs}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n}{part\PYGZus{}size} \PYG{o}{=} \PYG{n+nb}{max}\PYG{p}{(}\PYG{l+m+mi}{2} \PYG{o}{*}\PYG{o}{*} \PYG{n}{nextpow2}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{size}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)} \PYG{o}{/}\PYG{o}{/} \PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{,} \PYG{l+m+mi}{256}\PYG{p}{)}
+    \PYG{n}{N} \PYG{o}{=} \PYG{l+m+mi}{2} \PYG{o}{*}\PYG{o}{*} \PYG{n}{nextpow2}\PYG{p}{(}\PYG{n}{part\PYGZus{}size}\PYG{p}{)}
+
+    \PYG{n}{Fo} \PYG{o}{=} \PYG{n}{Fs} \PYG{o}{/} \PYG{n}{N}
+    \PYG{n}{f\PYGZus{}welch} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{N}\PYG{p}{)} \PYG{o}{*} \PYG{n}{Fo}
+
+    \PYG{n}{part\PYGZus{}start} \PYG{o}{=} \PYG{l+m+mi}{0}
+    \PYG{n}{part\PYGZus{}end} \PYG{o}{=} \PYG{n}{part\PYGZus{}start} \PYG{o}{+} \PYG{n}{part\PYGZus{}size}
+    \PYG{n}{cntr} \PYG{o}{=} \PYG{l+m+mi}{0}
+    \PYG{n}{fft\PYGZus{}sum} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{n}{N}\PYG{p}{)}
+
+    \PYG{k}{while} \PYG{n}{part\PYGZus{}start} \PYG{o}{+} \PYG{n}{part\PYGZus{}size} \PYG{o}{\PYGZlt{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{size}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{p}{:}
+
+        \PYG{n}{part} \PYG{o}{=} \PYG{n}{x}\PYG{p}{[}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{part\PYGZus{}start}\PYG{p}{)}\PYG{p}{:}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{part\PYGZus{}end}\PYG{p}{)}\PYG{p}{]}
+        \PYG{n}{temp} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{fft}\PYG{o}{.}\PYG{n}{fft}\PYG{p}{(}\PYG{n}{part}\PYG{p}{,} \PYG{n}{N}\PYG{p}{)}
+
+        \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{N}\PYG{p}{)}\PYG{p}{:}
+            \PYG{n}{fft\PYGZus{}sum}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{+}\PYG{o}{=} \PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{temp}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{p}{)}
+            \PYG{n}{i} \PYG{o}{+}\PYG{o}{=} \PYG{l+m+mi}{1}
+
+        \PYG{n}{part\PYGZus{}start} \PYG{o}{+}\PYG{o}{=} \PYG{n}{part\PYGZus{}size} \PYG{o}{/} \PYG{l+m+mi}{2}
+        \PYG{n}{part\PYGZus{}end} \PYG{o}{=} \PYG{n}{part\PYGZus{}start} \PYG{o}{+} \PYG{n}{part\PYGZus{}size}
+        \PYG{n}{cntr} \PYG{o}{+}\PYG{o}{=} \PYG{l+m+mi}{1}
+
+    \PYG{n}{fft\PYGZus{}avg} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{divide}\PYG{p}{(}\PYG{n}{fft\PYGZus{}sum}\PYG{p}{,} \PYG{n}{cntr}\PYG{p}{)}
+    \PYG{n}{avg\PYGZus{}pwr} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{multiply}\PYG{p}{(}\PYG{n}{fft\PYGZus{}avg}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{conj}\PYG{p}{(}\PYG{n}{fft\PYGZus{}avg}\PYG{p}{)}\PYG{p}{)} \PYG{o}{/} \PYG{n}{N} \PYG{o}{/} \PYG{n}{part\PYGZus{}size}
+
+    \PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+    \PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+    \PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{f\PYGZus{}welch}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{:}\PYG{n}{N} \PYG{o}{/}\PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,} \PYG{n}{avg\PYGZus{}pwr}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{:}\PYG{n}{N} \PYG{o}{/}\PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{)}
+    \PYG{n}{ax}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{n}{xlabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Frequency (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{ylabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Power}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{title}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Periodogram of pwelch (Μπρανίκας Φώτιος el17147)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{ax}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{savefig}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Periodogram of pwelch}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+
+    \PYG{k}{return} \PYG{n}{f\PYGZus{}welch}\PYG{p}{[}\PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{N} \PYG{o}{/}\PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{]}\PYG{p}{,} \PYG{n}{avg\PYGZus{}pwr}\PYG{p}{[}\PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{N} \PYG{o}{/}\PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{]}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{Fs}\PYG{o}{=}\PYG{l+m+mi}{500}
+\PYG{n}{f1}\PYG{p}{,}\PYG{n}{Pxx1} \PYG{o}{=} \PYG{n}{pwelch}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{n}{Fs}\PYG{p}{)}
+\PYG{n}{f2}\PYG{p}{,}\PYG{n}{Pxx2} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{welch}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{n}{fs}\PYG{o}{=}\PYG{n}{Fs}\PYG{p}{)}
+
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{f2}\PYG{p}{,}\PYG{n}{Pxx2}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{n}{xlabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Frequency (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{ylabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Power}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
+       \PYG{n}{title}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Periodogram signal.welch()}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise1_4_7_0}.png}
+
+\noindent\sphinxincludegraphics{{Exercise1_4_7_1}.png}
+
+
+\section*{Άσκηση 2η}
+\label{\detokenize{Exercise2_0:id1}}\label{\detokenize{Exercise2_0::doc}}
+\sphinxAtStartPar
+Θα ασχοληθούμε με το Παράδειγμα 1.2 της παραγράφου 1.5 του τεύχους Μαθήματος. Το παράδειγμα αυτό παρουσιάζει δύο εναλλακτικές μεθόδους σχεδιασμού FIR φίλτρων: α) τη μέθοδο των παραθύρων και β) τη μέθοδο των ισοϋψών κυματώσεων τις οποίες εφαρμόζει στην περίπτωση βαθυπερατών φίλτρων.
+
+\sphinxAtStartPar
+Στο παράδειγμα, τα φίλτρα δοκιμάζονται σε ένα πραγματικό σήμα, s, το οποίο είναι αποθηκευμένο στο αρχείο sima.mat (binary αρχείο MATLAB). Πρόκειται για ένα σήμα sonar με φάσμα που εκτείνεται μέχρι περίπου τα 4 KHz και συχνότητα δειγματοληψίας Fs=8192 (είναι και αυτή αποθηκευμένη στο αρχείο sima.mat, μαζί με το σήμα).
+
+
+\subsection*{Μέρος 1 Σχεδιασμός και υλοποίηση φίλτρων}
+\label{\detokenize{Exercise2_1:id1}}\label{\detokenize{Exercise2_1::doc}}
+
+\bigskip\hrule\bigskip
+
+
+\sphinxAtStartPar
+Εδώ θα πειραματιστούμε με δύο σήματα: (i) το sonar του παραδείγματος, το οποίο εδώ διαβάζεται από ένα .txt αρχείο
+(έχει προέλθει με εξαγωγή του s από το MATLAB) και (ii) ένα σήμα μουσικής, το violin.wav (σήμα από μουσική βιολιού),
+το οποίο περιέχει υψηλότερες συχνότητες και έχει προέλθει με δειγματοληψία στα Fs\_viol=44100 Hz.
+
+
+\subsubsection*{Σήμα sonar}
+\label{\detokenize{Exercise2_1:sonar}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Ανάγνωση δειγμάτων σήματος από txt file}
+\PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{sima.txt}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+    \PYG{n}{s} \PYG{o}{=} \PYG{p}{[}\PYG{n+nb}{float}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n}{f}\PYG{p}{]}
+\PYG{n}{s}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)}   
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{μέγεθος σήματος =}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{s}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{)}
+\PYG{n}{Fs}\PYG{o}{=}\PYG{l+m+mi}{8192}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+μέγεθος σήματος = (6565,)
+\end{sphinxVerbatim}
+
+
+\subsubsection*{Στο πεδίο του χρόνου}
+\label{\detokenize{Exercise2_1:id2}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{t}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)}\PYG{p}{)}\PYG{o}{/}\PYG{n}{Fs}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{t}\PYG{p}{,}\PYG{n}{s}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_6_0}.png}
+
+
+\subsubsection*{Ακούμε το σήμα}
+\label{\detokenize{Exercise2_1:id3}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Πρέπει να έχουμε εγκατεστημένη τη βιβλιοθήκη sounddevice}
+\PYG{k+kn}{import} \PYG{n+nn}{sounddevice} \PYG{k}{as} \PYG{n+nn}{sd}
+\PYG{n}{sd}\PYG{o}{.}\PYG{n}{play}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{o}{*}\PYG{n}{s}\PYG{p}{,}\PYG{n}{Fs}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+
+\subsubsection*{Φάσμα (spectrum)}
+\label{\detokenize{Exercise2_1:spectrum}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{f}\PYG{p}{,} \PYG{n}{Pxx\PYGZus{}den} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{welch}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,} \PYG{n}{Fs}\PYG{p}{,} \PYG{n}{noverlap}\PYG{o}{=}\PYG{l+m+mi}{128}\PYG{p}{,} \PYG{n}{nperseg}\PYG{o}{=}\PYG{l+m+mi}{256}\PYG{p}{)}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Φάσμα σήματος sonar}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{n}{alpha}\PYG{o}{=}\PYG{l+m+mf}{0.25}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Συχνότητα (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Πυκνότητα φάσματος ισχύος }\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n}{Pxx\PYGZus{}den}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+[\PYGZlt{}matplotlib.lines.Line2D at 0x12361e520\PYGZgt{}]
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_10_1}.png}
+
+
+\subsubsection*{Σήμα βιολιού}
+\label{\detokenize{Exercise2_1:id4}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{scipy} \PYG{k+kn}{import} \PYG{n}{signal}
+\PYG{k+kn}{import} \PYG{n+nn}{scipy}\PYG{n+nn}{.}\PYG{n+nn}{io}\PYG{n+nn}{.}\PYG{n+nn}{wavfile}
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib}\PYG{n+nn}{.}\PYG{n+nn}{pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{f}\PYG{o}{=}\PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{violin.wav}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{rb}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{Fs\PYGZus{}viol}\PYG{p}{,} \PYG{n}{s\PYGZus{}viol} \PYG{o}{=} \PYG{n}{scipy}\PYG{o}{.}\PYG{n}{io}\PYG{o}{.}\PYG{n}{wavfile}\PYG{o}{.}\PYG{n}{read}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Fs\PYGZus{}viol=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{Fs\PYGZus{}viol}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{ number of samples=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{s\PYGZus{}viol}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{f}\PYG{o}{.}\PYG{n}{close}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+Fs\PYGZus{}viol= 44100  number of samples= 220500
+\end{sphinxVerbatim}
+
+
+\subsubsection*{Στο πεδίο του χρόνου}
+\label{\detokenize{Exercise2_1:id5}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{tvl}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{s\PYGZus{}viol}\PYG{p}{)}\PYG{p}{)}\PYG{o}{/}\PYG{n}{Fs\PYGZus{}viol}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{tvl}\PYG{p}{,}\PYG{n}{s\PYGZus{}viol}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_15_0}.png}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Πρέπει να έχουμε εγκατεστημένη τη βιβλιοθήκη sounddevice}
+\PYG{k+kn}{import} \PYG{n+nn}{sounddevice} \PYG{k}{as} \PYG{n+nn}{sd}
+\PYG{n}{sd}\PYG{o}{.}\PYG{n}{play}\PYG{p}{(}\PYG{n}{s\PYGZus{}viol}\PYG{p}{,}\PYG{n}{Fs\PYGZus{}viol}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+
+\subsubsection*{Φάσμα (spectrum) και Φασματόγραμμα  (spectorgram)}
+\label{\detokenize{Exercise2_1:spectrum-spectorgram}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{f}\PYG{p}{,} \PYG{n}{Pxx\PYGZus{}den} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{welch}\PYG{p}{(}\PYG{n}{s\PYGZus{}viol}\PYG{p}{,} \PYG{n}{Fs\PYGZus{}viol}\PYG{p}{,} \PYG{n}{nperseg}\PYG{o}{=}\PYG{l+m+mi}{1024}\PYG{p}{,} \PYG{n}{noverlap}\PYG{o}{=}\PYG{l+m+mi}{256}\PYG{p}{)}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n}{Pxx\PYGZus{}den}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylim}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mf}{0.5e\PYGZhy{}2}\PYG{p}{,} \PYG{l+m+mf}{1e5}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Συχνότητα [Hz]}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Πυκνότητα φάσματος ισχύος [V**2/Hz]}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_18_0}.png}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{f}\PYG{p}{,} \PYG{n}{tsp}\PYG{p}{,} \PYG{n}{Sxx} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{spectrogram}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,} \PYG{n}{Fs}\PYG{p}{)}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{pcolormesh}\PYG{p}{(}\PYG{n}{tsp}\PYG{p}{,} \PYG{n}{f}\PYG{p}{,} \PYG{n}{Sxx}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Συχνότητα [Hz]}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Χρόνος [sec]}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_19_0}.png}
+
+
+\subsubsection*{Βαθυπερατά φίλτρα}
+\label{\detokenize{Exercise2_1:id6}}
+
+\subsubsection*{Η μέθοδος των παραθύρων}
+\label{\detokenize{Exercise2_1:id7}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{scipy} \PYG{k+kn}{import} \PYG{n}{signal}
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib}\PYG{n+nn}{.}\PYG{n+nn}{pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+\PYG{c+c1}{\PYGZsh{}}
+\PYG{c+c1}{\PYGZsh{} Fs=8192}
+\PYG{n}{H}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{hstack}\PYG{p}{(}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{ones}\PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{Fs}\PYG{o}{/}\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{)}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{Fs}\PYG{o}{\PYGZhy{}}\PYG{n}{Fs}\PYG{o}{/}\PYG{l+m+mi}{4}\PYG{p}{)}\PYG{p}{)}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{ones}\PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{Fs}\PYG{o}{/}\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{stem}\PYG{p}{(}\PYG{n}{H}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Το γράφημα αυτό αργεί... περιμένετε...}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_22_0}.png}
+
+
+\subsubsection*{\sphinxstyleemphasis{Ορθογωνικό παράθυρο (απλή περικοπή της h)}}
+\label{\detokenize{Exercise2_1:h}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{h}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{real}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{fft}\PYG{o}{.}\PYG{n}{ifft}\PYG{p}{(}\PYG{n}{H}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{middle}\PYG{o}{=}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{h}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{n}{h}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{hstack}\PYG{p}{(}\PYG{p}{(}\PYG{n}{h}\PYG{p}{[}\PYG{n}{middle}\PYG{p}{:}\PYG{p}{]}\PYG{p}{,}\PYG{n}{h}\PYG{p}{[}\PYG{p}{:}\PYG{n}{middle}\PYG{p}{]}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{h32}\PYG{o}{=}\PYG{n}{h}\PYG{p}{[}\PYG{n}{middle}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{16}\PYG{p}{:}\PYG{n}{middle}\PYG{o}{+}\PYG{l+m+mi}{16}\PYG{p}{]}
+\PYG{n}{h128}\PYG{o}{=}\PYG{n}{h}\PYG{p}{[}\PYG{n}{middle}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{64}\PYG{p}{:}\PYG{n}{middle}\PYG{o}{+}\PYG{l+m+mi}{64}\PYG{p}{]}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{stem}\PYG{p}{(}\PYG{n}{h32}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_24_0}.png}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Σχεδίαση απόκρισης συχνότητας (πλάτους)}
+\PYG{c+c1}{\PYGZsh{}  ΜΠΟΡΕΙ ΝΑ ΓΙΝΕΙ ΣΥΝΑΡΤΗΣΗ !!!}
+
+\PYG{n}{freq}\PYG{p}{,}\PYG{n}{resp32} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{freqz}\PYG{p}{(}\PYG{n}{h32}\PYG{p}{)}\PYG{p}{;}
+
+
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Απόκριση συχνότητας βαθυπερατού φίλτρου}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{ (με ορθογωνικά παράθυρα)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{n}{alpha}\PYG{o}{=}\PYG{l+m+mf}{0.25}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Συχνότητα (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Κέρδος}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{Fs}\PYG{o}{*}\PYG{n}{freq}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{resp32}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{b\PYGZhy{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{freq}\PYG{p}{,}\PYG{n}{resp128} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{freqz}\PYG{p}{(}\PYG{n}{h128}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{Fs}\PYG{o}{*}\PYG{n}{freq}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{resp128}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{g\PYGZhy{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_25_0}.png}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_25_1}.png}
+
+
+\subsubsection*{\sphinxstyleemphasis{Παράθυρα Hamming και Kaiser}}
+\label{\detokenize{Exercise2_1:hamming-kaiser}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{h64}\PYG{o}{=}\PYG{n}{h}\PYG{p}{[}\PYG{n}{middle}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{32}\PYG{p}{:}\PYG{n}{middle}\PYG{o}{+}\PYG{l+m+mi}{32}\PYG{p}{]}
+\PYG{n}{freq}\PYG{p}{,}\PYG{n}{resp64} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{freqz}\PYG{p}{(}\PYG{n}{h64}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{w\PYGZus{}hamming}\PYG{o}{=}\PYG{n}{signal}\PYG{o}{.}\PYG{n}{hamming}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{h64}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{h64\PYGZus{}hamming} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{multiply}\PYG{p}{(}\PYG{n}{h64}\PYG{p}{,}\PYG{n}{w\PYGZus{}hamming}\PYG{p}{)}
+\PYG{n}{w\PYGZus{}kaiser}\PYG{o}{=}\PYG{n}{signal}\PYG{o}{.}\PYG{n}{kaiser}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{h64}\PYG{p}{)}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{)}
+\PYG{n}{h64\PYGZus{}kaiser} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{multiply}\PYG{p}{(}\PYG{n}{h64}\PYG{p}{,}\PYG{n}{w\PYGZus{}kaiser}\PYG{p}{)}
+
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Απόκριση συχνότητας βαθυπερατού φίλτρου}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{ παράθυρα hamming (πράσινο) και kaiser (κόκκινο)}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{(το αντίστοιχο ορθογωνικό σε μπλε)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{n}{alpha}\PYG{o}{=}\PYG{l+m+mf}{0.25}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Συχνότητα (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Κέρδος}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{Fs}\PYG{o}{*}\PYG{n}{freq}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{resp64}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{b\PYGZhy{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{freq}\PYG{p}{,}\PYG{n}{resp64\PYGZus{}hamming} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{freqz}\PYG{p}{(}\PYG{n}{h64\PYGZus{}hamming}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{Fs}\PYG{o}{*}\PYG{n}{freq}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{resp64\PYGZus{}hamming}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{g\PYGZhy{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{freq}\PYG{p}{,}\PYG{n}{resp64\PYGZus{}kaiser} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{freqz}\PYG{p}{(}\PYG{n}{h64\PYGZus{}kaiser}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{Fs}\PYG{o}{*}\PYG{n}{freq}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{resp64\PYGZus{}kaiser}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{r\PYGZhy{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_27_0}.png}
+
+
+\subsubsection*{Φίλτρα ισοϋψών κυματώσεων}
+\label{\detokenize{Exercise2_1:id8}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{lpass} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{remez}\PYG{p}{(}\PYG{l+m+mi}{64}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1000}\PYG{p}{,} \PYG{l+m+mi}{1300}\PYG{p}{,} \PYG{n}{Fs}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{n}{fs}\PYG{o}{=}\PYG{n}{Fs}\PYG{p}{)}
+
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Απόκριση συχνότητας βαθυπερατού φίλτρου equirriple (πράσινο) }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{(το αντίστοιχο με ορθογωνικό παραθυρο σε μπλε)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{n}{alpha}\PYG{o}{=}\PYG{l+m+mf}{0.25}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Συχνότητα (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Κέρδος}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{Fs}\PYG{o}{*}\PYG{n}{freq}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{resp64}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{b\PYGZhy{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{freq}\PYG{p}{,}\PYG{n}{resp\PYGZus{}pm} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{freqz}\PYG{p}{(}\PYG{n}{lpass}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{Fs}\PYG{o}{*}\PYG{n}{freq}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{resp\PYGZus{}pm}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{g\PYGZhy{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_29_0}.png}
+
+
+\subsubsection*{Εφαρμογή του φίλτρου}
+\label{\detokenize{Exercise2_1:id9}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{s\PYGZus{}pm} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{convolve}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,}\PYG{n}{lpass}\PYG{p}{,}\PYG{n}{mode}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{same}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{o}{/}\PYG{n+nb}{sum}\PYG{p}{(}\PYG{n}{lpass}\PYG{p}{)}
+
+\PYG{n}{f}\PYG{p}{,} \PYG{n}{Pxx\PYGZus{}den} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{welch}\PYG{p}{(}\PYG{n}{s\PYGZus{}pm}\PYG{p}{,} \PYG{n}{Fs}\PYG{p}{,} \PYG{n}{noverlap}\PYG{o}{=}\PYG{l+m+mi}{128}\PYG{p}{,} \PYG{n}{nperseg}\PYG{o}{=}\PYG{l+m+mi}{256}\PYG{p}{)}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Φάσμα φιλτραρισμένου σήματος sonar}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{n}{alpha}\PYG{o}{=}\PYG{l+m+mf}{0.25}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Συχνότητα (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Πυκνότητα φάσματος ισχύος}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylim}\PYG{p}{(}\PYG{p}{(}\PYG{l+m+mf}{1e\PYGZhy{}15}\PYG{p}{,}\PYG{l+m+mf}{1e\PYGZhy{}7}\PYG{p}{)}\PYG{p}{)}
+
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n}{Pxx\PYGZus{}den}\PYG{p}{)}
+\PYG{n}{sd}\PYG{o}{.}\PYG{n}{play}\PYG{p}{(}\PYG{n}{s\PYGZus{}pm}\PYG{p}{,}\PYG{n}{Fs}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_31_0}.png}
+
+
+\subsubsection*{Ζωνοπερατά φίλτρα}
+\label{\detokenize{Exercise2_1:id10}}
+
+\subsubsection*{\sphinxstyleemphasis{Με αναλυτικό υπολογισμό της κρουστικής απόκρισης και παράθυρο}}
+\label{\detokenize{Exercise2_1:id11}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Με αναλυτικό υπολογισμό της κρουστικής απόκρισης και παράθυρο kaiser}
+\PYG{n}{f1}\PYG{o}{=}\PYG{l+m+mi}{800}\PYG{p}{;} \PYG{n}{f2}\PYG{o}{=}\PYG{l+m+mi}{1600}\PYG{p}{;}  
+\PYG{n}{Ts}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{Fs}\PYG{p}{;}
+\PYG{n}{f2m1}\PYG{o}{=}\PYG{p}{(}\PYG{n}{f2}\PYG{o}{\PYGZhy{}}\PYG{n}{f1}\PYG{p}{)}\PYG{p}{;} \PYG{n}{f2p1}\PYG{o}{=}\PYG{p}{(}\PYG{n}{f2}\PYG{o}{+}\PYG{n}{f1}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{;} \PYG{n}{N}\PYG{o}{=}\PYG{l+m+mi}{256}
+\PYG{n}{t}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{p}{(}\PYG{n}{N}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{,}\PYG{n}{N}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{o}{*}\PYG{n}{Ts}\PYG{o}{/}\PYG{l+m+mi}{2}
+\PYG{n}{hbp}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{o}{/}\PYG{n}{Fs}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{divide}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{multiply}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{o}{*}\PYG{n}{f2p1}\PYG{o}{*}\PYG{n}{t}\PYG{p}{)}\PYG{p}{,}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{o}{*}\PYG{n}{f2m1}\PYG{o}{*}\PYG{n}{t}\PYG{p}{)}\PYG{p}{)}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,}\PYG{n}{t}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{hbpw}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{multiply}\PYG{p}{(}\PYG{n}{hbp}\PYG{p}{,}\PYG{n}{signal}\PYG{o}{.}\PYG{n}{kaiser}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{hbp}\PYG{p}{)}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{n}{s\PYGZus{}bp}\PYG{o}{=}\PYG{n}{signal}\PYG{o}{.}\PYG{n}{convolve}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,}\PYG{n}{hbp}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{same}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{f}\PYG{p}{,} \PYG{n}{Pxx\PYGZus{}den} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{welch}\PYG{p}{(}\PYG{n}{s\PYGZus{}bp}\PYG{p}{,} \PYG{n}{Fs}\PYG{p}{,} \PYG{n}{noverlap}\PYG{o}{=}\PYG{l+m+mi}{128}\PYG{p}{,} \PYG{n}{nperseg}\PYG{o}{=}\PYG{l+m+mi}{256}\PYG{p}{)}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Φάσμα ζωνοπερατού σήματος sonar}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{n}{alpha}\PYG{o}{=}\PYG{l+m+mf}{0.25}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Συχνότητα (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Πυκνότητα φάσματος ισχύος}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylim}\PYG{p}{(}\PYG{p}{(}\PYG{l+m+mf}{1e\PYGZhy{}15}\PYG{p}{,}\PYG{l+m+mf}{1e\PYGZhy{}7}\PYG{p}{)}\PYG{p}{)}
+
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n}{Pxx\PYGZus{}den}\PYG{p}{)}
+\PYG{n}{sd}\PYG{o}{.}\PYG{n}{play}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{o}{*}\PYG{n}{s\PYGZus{}bp}\PYG{p}{,}\PYG{n}{Fs}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_35_0}.png}
+
+
+\subsubsection*{\sphinxstyleemphasis{Ζωνοπερατό ισουψών κυματώσεων}}
+\label{\detokenize{Exercise2_1:id12}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{bpass} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{remez}\PYG{p}{(}\PYG{l+m+mi}{128}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{f1}\PYG{o}{*}\PYG{l+m+mf}{0.9}\PYG{p}{,} \PYG{n}{f1}\PYG{o}{*}\PYG{l+m+mf}{1.1}\PYG{p}{,} \PYG{n}{f2}\PYG{o}{*}\PYG{l+m+mf}{0.95}\PYG{p}{,} \PYG{n}{f2}\PYG{o}{*}\PYG{l+m+mf}{1.05}\PYG{p}{,} \PYG{n}{Fs}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{n}{fs}\PYG{o}{=}\PYG{n}{Fs}\PYG{p}{)}
+
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Απόκριση συχνότητας ζωνοπερατού φίλτρου equirriple}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{n}{alpha}\PYG{o}{=}\PYG{l+m+mf}{0.25}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Συχνότητα (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Κέρδος}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{freq}\PYG{p}{,}\PYG{n}{resp\PYGZus{}pm} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{freqz}\PYG{p}{(}\PYG{n}{bpass}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{Fs}\PYG{o}{*}\PYG{n}{freq}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{resp\PYGZus{}pm}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{g\PYGZhy{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_37_0}.png}
+
+
+\subsubsection*{Ζωνοπερατό φίλτρο με ζώνες διέλευσης (750 Hz, 950 Hz) και (3000 Hz, 3500 Hz)}
+\label{\detokenize{Exercise2_1:hz-950-hz-3000-hz-3500-hz}}
+
+\subsubsection*{\sphinxstyleemphasis{Με αναλυτικό υπολογισμό της κρουστικής απόκρισης και παράθυρο}}
+\label{\detokenize{Exercise2_1:id13}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{f1}\PYG{o}{=}\PYG{l+m+mi}{750} 
+\PYG{n}{f2}\PYG{o}{=}\PYG{l+m+mi}{950}
+\PYG{n}{f3}\PYG{o}{=}\PYG{l+m+mi}{3000}
+\PYG{n}{f4}\PYG{o}{=}\PYG{l+m+mi}{3500}
+\PYG{n}{Ts}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{Fs}
+\PYG{n}{f2m1}\PYG{o}{=}\PYG{p}{(}\PYG{n}{f2}\PYG{o}{\PYGZhy{}}\PYG{n}{f1}\PYG{p}{)}
+\PYG{n}{f2p1}\PYG{o}{=}\PYG{p}{(}\PYG{n}{f2}\PYG{o}{+}\PYG{n}{f1}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{2} 
+\PYG{n}{f4m3}\PYG{o}{=}\PYG{p}{(}\PYG{n}{f4}\PYG{o}{\PYGZhy{}}\PYG{n}{f3}\PYG{p}{)}
+\PYG{n}{f4p3}\PYG{o}{=}\PYG{p}{(}\PYG{n}{f4}\PYG{o}{+}\PYG{n}{f3}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{2}
+\PYG{n}{N}\PYG{o}{=}\PYG{l+m+mi}{256}
+\PYG{n}{t}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{p}{(}\PYG{n}{N}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{,}\PYG{n}{N}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{o}{*}\PYG{n}{Ts}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{;}
+\PYG{n}{band1}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{o}{/}\PYG{n}{Fs}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{divide}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{multiply}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{o}{*}\PYG{n}{f2p1}\PYG{o}{*}\PYG{n}{t}\PYG{p}{)}\PYG{p}{,}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{o}{*}\PYG{n}{f2m1}\PYG{o}{*}\PYG{n}{t}\PYG{p}{)}\PYG{p}{)}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,}\PYG{n}{t}\PYG{p}{)}
+\PYG{n}{band2}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{o}{/}\PYG{n}{Fs}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{divide}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{multiply}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{o}{*}\PYG{n}{f4p3}\PYG{o}{*}\PYG{n}{t}\PYG{p}{)}\PYG{p}{,}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{o}{*}\PYG{n}{f4m3}\PYG{o}{*}\PYG{n}{t}\PYG{p}{)}\PYG{p}{)}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,}\PYG{n}{t}\PYG{p}{)}
+\PYG{n}{hbp2}\PYG{o}{=}\PYG{n}{band1}\PYG{o}{+}\PYG{n}{band2}
+\PYG{n}{hbpw2}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{multiply}\PYG{p}{(}\PYG{n}{hbp2}\PYG{p}{,}\PYG{n}{signal}\PYG{o}{.}\PYG{n}{kaiser}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{hbp2}\PYG{p}{)}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{s\PYGZus{}bp2}\PYG{o}{=}\PYG{n}{signal}\PYG{o}{.}\PYG{n}{convolve}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,}\PYG{n}{hbpw2}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{same}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Απόκριση συχνότητας ζωνοπερατού φίλτρου με ζώνες διέλευσης (750 Hz, 950 Hz) και (3000 Hz, 3500 Hz) και παράθυρο kaiser}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{n}{alpha}\PYG{o}{=}\PYG{l+m+mf}{0.25}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Συχνότητα (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Κέρδος}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{freq}\PYG{p}{,}\PYG{n}{resp\PYGZus{}pm} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{freqz}\PYG{p}{(}\PYG{n}{hbpw2}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{Fs}\PYG{o}{*}\PYG{n}{freq}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{resp\PYGZus{}pm}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{g\PYGZhy{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{n}{f}\PYG{p}{,} \PYG{n}{Pxx\PYGZus{}den} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{welch}\PYG{p}{(}\PYG{n}{s\PYGZus{}bp2}\PYG{p}{,} \PYG{n}{Fs}\PYG{p}{,} \PYG{n}{noverlap}\PYG{o}{=}\PYG{l+m+mi}{128}\PYG{p}{,} \PYG{n}{nperseg}\PYG{o}{=}\PYG{l+m+mi}{256}\PYG{p}{)}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Φάσμα ζωνοπερατού σήματος sonar (2 ζώνες διέλευσης)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{n}{alpha}\PYG{o}{=}\PYG{l+m+mf}{0.25}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Συχνότητα (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Πυκνότητα φάσματος ισχύος}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylim}\PYG{p}{(}\PYG{p}{(}\PYG{l+m+mf}{1e\PYGZhy{}15}\PYG{p}{,}\PYG{l+m+mf}{1e\PYGZhy{}7}\PYG{p}{)}\PYG{p}{)}
+
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n}{Pxx\PYGZus{}den}\PYG{p}{)}
+\PYG{n}{sd}\PYG{o}{.}\PYG{n}{play}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{o}{*}\PYG{n}{s\PYGZus{}bp2}\PYG{p}{,}\PYG{n}{Fs}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_41_0}.png}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_41_1}.png}
+
+
+\subsubsection*{\sphinxstyleemphasis{Εφαρμογή φίλτρου στο σήμα violin}}
+\label{\detokenize{Exercise2_1:violin}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{s\PYGZus{}viol\PYGZus{}bp2}\PYG{o}{=}\PYG{n}{signal}\PYG{o}{.}\PYG{n}{convolve}\PYG{p}{(}\PYG{n}{s\PYGZus{}viol}\PYG{p}{,}\PYG{n}{hbpw2}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{same}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{n}{f}\PYG{p}{,} \PYG{n}{Pxx\PYGZus{}den} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{welch}\PYG{p}{(}\PYG{n}{s\PYGZus{}viol\PYGZus{}bp2}\PYG{p}{,} \PYG{n}{Fs\PYGZus{}viol}\PYG{p}{,} \PYG{n}{noverlap}\PYG{o}{=}\PYG{l+m+mi}{128}\PYG{p}{,} \PYG{n}{nperseg}\PYG{o}{=}\PYG{l+m+mi}{256}\PYG{p}{)}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Φάσμα ζωνοπερατού σήματος violin (2 ζώνες διέλευσης)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{n}{alpha}\PYG{o}{=}\PYG{l+m+mf}{0.25}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Συχνότητα (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Πυκνότητα φάσματος ισχύος}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylim}\PYG{p}{(}\PYG{p}{(}\PYG{l+m+mf}{1e\PYGZhy{}15}\PYG{p}{,}\PYG{l+m+mf}{1e\PYGZhy{}7}\PYG{p}{)}\PYG{p}{)}
+
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n}{Pxx\PYGZus{}den}\PYG{p}{)}
+\PYG{n}{sd}\PYG{o}{.}\PYG{n}{play}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{o}{*}\PYG{n}{s\PYGZus{}viol\PYGZus{}bp2}\PYG{p}{,}\PYG{n}{Fs\PYGZus{}viol}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_43_0}.png}
+
+
+\subsubsection*{\sphinxstyleemphasis{Ζωνοπερατό ισουψών κυματώσεων με ζώνες διέλευσης (750 Hz, 950 Hz) και (3000 Hz, 3500 Hz)}}
+\label{\detokenize{Exercise2_1:id14}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{bpass2} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{remez}\PYG{p}{(}\PYG{l+m+mi}{128}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{f1}\PYG{o}{*}\PYG{l+m+mf}{0.8}\PYG{p}{,} \PYG{n}{f1}\PYG{p}{,} \PYG{n}{f2}\PYG{p}{,} \PYG{l+m+mf}{1.15}\PYG{o}{*}\PYG{n}{f2}\PYG{p}{,} \PYG{n}{f3}\PYG{o}{*}\PYG{l+m+mf}{0.95}\PYG{p}{,} \PYG{n}{f3}\PYG{p}{,} \PYG{n}{f4}\PYG{p}{,} \PYG{n}{f4}\PYG{o}{*}\PYG{l+m+mf}{1.03}\PYG{p}{,} \PYG{n}{Fs}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,}
+                      \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{n}{fs}\PYG{o}{=}\PYG{n}{Fs}\PYG{p}{)}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Απόκριση συχνότητας ζωνοπερατού φίλτρου με ζώνες διέλευσης (750 Hz, 950 Hz) και (3000 Hz, 3500 Hz) με χρήση της signal.remez}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Συχνότητα (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Κέρδος}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{freq}\PYG{p}{,}\PYG{n}{resp\PYGZus{}pm} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{freqz}\PYG{p}{(}\PYG{n}{bpass2}\PYG{p}{)}
+
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{Fs}\PYG{o}{*}\PYG{n}{freq}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{resp\PYGZus{}pm}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{g\PYGZhy{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+
+\PYG{n}{s\PYGZus{}bpass2} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{convolve}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,}\PYG{n}{bpass2}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{same}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_1_45_0}.png}
+
+
+\subsection*{Μέρος 2 Ζωνοπερατό φίλτρο}
+\label{\detokenize{Exercise2_2:id1}}\label{\detokenize{Exercise2_2::doc}}
+
+\subsubsection*{\sphinxstyleemphasis{Ζωνοπερατό φίλτρο με ζώνες διέλευσης (750 Hz, 950 Hz) και (3000 Hz, 3500 Hz)}}
+\label{\detokenize{Exercise2_2:hz-950-hz-3000-hz-3500-hz}}
+\sphinxAtStartPar
+Παρακάτω πραγματοποιείται ο σχεδιασμός ζωνοπερατού φίλτρου με ζώνες διέλευσης: (750 Hz, 950 Hz) και (3000 Hz, 3500 Hz) και η εφαρμογή του στο σήμα sonar. Χρησιμοποιήθηκαν δύο διαφορετικές μέθοδοι για τον σχεδιασμό αυτού του φίλτρου: η μέθοδος αναλυτικού υπλογισμού της κρουστικης απόκρισης με εφαρμογή παραθύρου και η μέθοδος ισοϋψών κυματώσεων. Κατά τον σχεδιασμό του φίλτρου με την μέθοδο ισοϋψών κυματώσεων, χρειάστηκε να γίνει κατάλληλη χρήση της συνάρτησης signal.remez για την οποία έπρεπε να οριστούν κατάλληλα τα όρια των ζώνων διέλευσης και αποκοπής ετσι ώστε να αποφευχθεί οποιοδήποτε πιθανό φαινόμενο απότομης μεταβολής της έντασης στην ζώνη διέλευσης.
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{warnings}
+\PYG{k+kn}{import} \PYG{n+nn}{sounddevice} \PYG{k}{as} \PYG{n+nn}{sd}
+\PYG{k+kn}{import} \PYG{n+nn}{scipy}\PYG{n+nn}{.}\PYG{n+nn}{io}\PYG{n+nn}{.}\PYG{n+nn}{wavfile}
+\PYG{k+kn}{from} \PYG{n+nn}{scipy} \PYG{k+kn}{import} \PYG{n}{signal}
+\PYG{k+kn}{import} \PYG{n+nn}{scipy}\PYG{n+nn}{.}\PYG{n+nn}{io}\PYG{n+nn}{.}\PYG{n+nn}{wavfile}
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib}\PYG{n+nn}{.}\PYG{n+nn}{pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+\PYG{n}{warnings}\PYG{o}{.}\PYG{n}{filterwarnings}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{ignore}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+
+\subsubsection*{Σήμα sonar}
+\label{\detokenize{Exercise2_2:sonar}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Ανάγνωση δειγμάτων σήματος από txt file}
+\PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{sima.txt}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+    \PYG{n}{s} \PYG{o}{=} \PYG{p}{[}\PYG{n+nb}{float}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n}{f}\PYG{p}{]}
+\PYG{n}{s}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)}   
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{μέγεθος σήματος=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{s}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{)}
+\PYG{n}{Fs}\PYG{o}{=}\PYG{l+m+mi}{8192}
+\PYG{n}{sd}\PYG{o}{.}\PYG{n}{play}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{o}{*}\PYG{n}{s}\PYG{p}{,}\PYG{n}{Fs}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+μέγεθος σήματος= (6565,)
+\end{sphinxVerbatim}
+
+
+\subsubsection*{Ζωνοπερατό φίλτρο με ζώνες διέλευσης (750 Hz, 950 Hz) και (3000 Hz, 3500 Hz)}
+\label{\detokenize{Exercise2_2:id2}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{f1}\PYG{o}{=}\PYG{l+m+mi}{750} 
+\PYG{n}{f2}\PYG{o}{=}\PYG{l+m+mi}{950}
+\PYG{n}{f3}\PYG{o}{=}\PYG{l+m+mi}{3000}
+\PYG{n}{f4}\PYG{o}{=}\PYG{l+m+mi}{3500}
+\PYG{n}{Ts}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{Fs}
+\PYG{n}{f2m1}\PYG{o}{=}\PYG{p}{(}\PYG{n}{f2}\PYG{o}{\PYGZhy{}}\PYG{n}{f1}\PYG{p}{)}
+\PYG{n}{f2p1}\PYG{o}{=}\PYG{p}{(}\PYG{n}{f2}\PYG{o}{+}\PYG{n}{f1}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{2} 
+\PYG{n}{f4m3}\PYG{o}{=}\PYG{p}{(}\PYG{n}{f4}\PYG{o}{\PYGZhy{}}\PYG{n}{f3}\PYG{p}{)}
+\PYG{n}{f4p3}\PYG{o}{=}\PYG{p}{(}\PYG{n}{f4}\PYG{o}{+}\PYG{n}{f3}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{2}
+\PYG{n}{N}\PYG{o}{=}\PYG{l+m+mi}{256}
+\end{sphinxVerbatim}
+
+
+\subsubsection*{\sphinxstyleemphasis{Σχεδιασμός φίλτρου με αναλυτικό υπολογισμό της κρουστικής απόκρισης και παράθυρο}}
+\label{\detokenize{Exercise2_2:id3}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{t}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{p}{(}\PYG{n}{N}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{,}\PYG{n}{N}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{o}{*}\PYG{n}{Ts}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{;}
+\PYG{n}{band1}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{o}{/}\PYG{n}{Fs}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{divide}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{multiply}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{o}{*}\PYG{n}{f2p1}\PYG{o}{*}\PYG{n}{t}\PYG{p}{)}\PYG{p}{,}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{o}{*}\PYG{n}{f2m1}\PYG{o}{*}\PYG{n}{t}\PYG{p}{)}\PYG{p}{)}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,}\PYG{n}{t}\PYG{p}{)}
+\PYG{n}{band2}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{o}{/}\PYG{n}{Fs}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{divide}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{multiply}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{o}{*}\PYG{n}{f4p3}\PYG{o}{*}\PYG{n}{t}\PYG{p}{)}\PYG{p}{,}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{o}{*}\PYG{n}{f4m3}\PYG{o}{*}\PYG{n}{t}\PYG{p}{)}\PYG{p}{)}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,}\PYG{n}{t}\PYG{p}{)}
+\PYG{n}{hbp2}\PYG{o}{=}\PYG{n}{band1}\PYG{o}{+}\PYG{n}{band2}
+\PYG{n}{hbpw2}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{multiply}\PYG{p}{(}\PYG{n}{hbp2}\PYG{p}{,}\PYG{n}{signal}\PYG{o}{.}\PYG{n}{kaiser}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{hbp2}\PYG{p}{)}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{fig} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{suptitle}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Απόκριση συχνότητας ζωνοπερατού φίλτρου με ζώνες διέλευσης (750 Hz, 950 Hz) και (3000 Hz, 3500 Hz) και παράθυρο kaiser}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Μπρανίκας Φώτιος el17147}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Συχνότητα (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Κέρδος}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+\PYG{n}{freq}\PYG{p}{,}\PYG{n}{resp\PYGZus{}pm} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{freqz}\PYG{p}{(}\PYG{n}{hbpw2}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{Fs}\PYG{o}{*}\PYG{n}{freq}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{resp\PYGZus{}pm}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{g\PYGZhy{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_2_8_0}.png}
+
+
+\subsubsection*{\sphinxstyleemphasis{Εφαρμογή φίλτρου στο σήμα sonar}}
+\label{\detokenize{Exercise2_2:id4}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{s\PYGZus{}bp2}\PYG{o}{=}\PYG{n}{signal}\PYG{o}{.}\PYG{n}{convolve}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,}\PYG{n}{hbpw2}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{same}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{n}{f}\PYG{p}{,} \PYG{n}{Pxx\PYGZus{}den} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{welch}\PYG{p}{(}\PYG{n}{s\PYGZus{}bp2}\PYG{p}{,} \PYG{n}{Fs}\PYG{p}{,} \PYG{n}{noverlap}\PYG{o}{=}\PYG{l+m+mi}{128}\PYG{p}{,} \PYG{n}{nperseg}\PYG{o}{=}\PYG{l+m+mi}{256}\PYG{p}{)}
+\PYG{n}{fig} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{suptitle}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Φάσμα ζωνοπερατού σήματος sonar (2 ζώνες διέλευσης)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Μπρανίκας Φώτιος el17147}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Συχνότητα (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Πυκνότητα φάσματος ισχύος}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylim}\PYG{p}{(}\PYG{p}{(}\PYG{l+m+mf}{1e\PYGZhy{}15}\PYG{p}{,}\PYG{l+m+mf}{1e\PYGZhy{}7}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n}{Pxx\PYGZus{}den}\PYG{p}{)}
+\PYG{n}{sd}\PYG{o}{.}\PYG{n}{play}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{o}{*}\PYG{n}{s\PYGZus{}bp2}\PYG{p}{,}\PYG{n}{Fs}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_2_10_0}.png}
+
+
+\subsubsection*{\sphinxstyleemphasis{Σχεδιασμός Ζωνοπερατού φίλτρου ισουψών κυματώσεων με ζώνες διέλευσης (750 Hz, 950 Hz) και (3000 Hz, 3500 Hz)}}
+\label{\detokenize{Exercise2_2:id5}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{bpass2} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{remez}\PYG{p}{(}\PYG{l+m+mi}{256}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{f1}\PYG{o}{*}\PYG{l+m+mf}{0.9}\PYG{p}{,} \PYG{n}{f1}\PYG{p}{,} \PYG{n}{f2}\PYG{p}{,} \PYG{l+m+mf}{1.1}\PYG{o}{*}\PYG{n}{f2}\PYG{p}{,} \PYG{n}{f3}\PYG{o}{*}\PYG{l+m+mf}{0.97}\PYG{p}{,} \PYG{n}{f3}\PYG{p}{,} \PYG{n}{f4}\PYG{p}{,} \PYG{n}{f4}\PYG{o}{*}\PYG{l+m+mf}{1.03}\PYG{p}{,} \PYG{n}{Fs}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,}
+                      \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{n}{fs}\PYG{o}{=}\PYG{n}{Fs}\PYG{p}{)}
+
+\PYG{n}{fig} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{suptitle}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Απόκριση συχνότητας ζωνοπερατού φίλτρου με ζώνες διέλευσης (750 Hz, 950 Hz) και (3000 Hz, 3500 Hz) με χρήση της signal.remez}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Μπρανίκας Φώτιος el17147}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Συχνότητα (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Κέρδος}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{freq}\PYG{p}{,}\PYG{n}{resp\PYGZus{}pm} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{freqz}\PYG{p}{(}\PYG{n}{bpass2}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{Fs}\PYG{o}{*}\PYG{n}{freq}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{resp\PYGZus{}pm}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{g\PYGZhy{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Exercise2_2_12_0}.png}
+
+
+\subsubsection*{\sphinxstyleemphasis{Εφαρμογή φίλτρου στο σήμα sonar}}
+\label{\detokenize{Exercise2_2:id6}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{s\PYGZus{}bpass2} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{convolve}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,}\PYG{n}{bpass2}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{same}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{f}\PYG{p}{,} \PYG{n}{Pxx\PYGZus{}den} \PYG{o}{=} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{welch}\PYG{p}{(}\PYG{n}{s\PYGZus{}bpass2}\PYG{p}{,} \PYG{n}{Fs}\PYG{p}{,} \PYG{n}{noverlap}\PYG{o}{=}\PYG{l+m+mi}{128}\PYG{p}{,} \PYG{n}{nperseg}\PYG{o}{=}\PYG{l+m+mi}{256}\PYG{p}{)}
+\PYG{n}{fig} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{suptitle}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Φάσμα ζωνοπερατού σήματος sonar (2 ζώνες διέλευσης)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Μπρανίκας Φώτιος el17147}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Συχνότητα (Hz)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Πυκνότητα φάσματος ισχύος}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylim}\PYG{p}{(}\PYG{p}{(}\PYG{l+m+mf}{1e\PYGZhy{}15}\PYG{p}{,}\PYG{l+m+mf}{1e\PYGZhy{}7}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{set\PYGZus{}size\PYGZus{}inches}\PYG{p}{(}\PYG{l+m+mf}{18.5}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{semilogy}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n}{Pxx\PYGZus{}den}\PYG{p}{)}
+\PYG{n}{sd}\PYG{o}{.}\PYG{n}{play}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{o}{*}\PYG{n}{s\PYGZus{}bpass2}\PYG{p}{,}\PYG{n}{Fs}\PYG{p}{)}
+
+\PYG{k}{for} 
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+gt}{  File}\PYG{n+nn}{ \PYGZdq{}\PYGZlt{}ipython\PYGZhy{}input\PYGZhy{}7\PYGZhy{}9884b6f1db20\PYGZgt{}\PYGZdq{}}\PYG{g+gt}{, line }\PYG{l+m+mi}{15}
+    \PYG{k}{for}
+        \PYG{o}{\PYGZca{}}
+\PYG{n+ne}{SyntaxError}: invalid syntax
+\end{sphinxVerbatim}
 
 
 

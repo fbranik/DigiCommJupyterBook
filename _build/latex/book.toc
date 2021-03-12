@@ -1,2 +1,2 @@
 \selectlanguage *{english}
-\contentsline {chapter}{\numberline {1}Πληροφορίες για το Jupyter Book}{1}{chapter.1}%
+\contentsline {paragraph}{Φασματική Ανάλυση}{6}{paragraph*.2}%

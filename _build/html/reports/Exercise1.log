@@ -1,0 +1,97 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.9/site-packages/nbclient/client.py", line 1107, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.9/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/usr/local/lib/python3.9/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/local/Cellar/python@3.9/3.9.0_5/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.9/site-packages/nbclient/client.py", line 553, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.9/site-packages/nbclient/client.py", line 852, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/usr/local/lib/python3.9/site-packages/nbclient/client.py", line 760, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Part 1 Δημιουργήστε το σήμα
+Fs=1000                    # συχνότητα δειγματοληψίας 1000 Hz
+Ts=#συμπληρώστε#           # περίοδος δειγματοληψίας
+L=1000                     # μήκος σήματος (αριθμός δειγμάτων)
+T=L*Ts                     # διάρκεια σήματος
+t=np.arange(0,(L-1)*Ts,Ts) # χρονικές στιγμές υπολογισμού του σήματος
+        
+x=np.sin(2*np.pi*30*t) \
++ 0.8*np.sin(2*np.pi*80*(t-2)) \
++ np.sin(2*np.pi*60*t);                # συνιστώσα 60 Hz
+    
+
+# Σχεδιάστε το σήμα στο πεδίο του χρόνου
+
+fig, ax = plt.subplots()
+fig.set_size_inches(18.5, 10.5)
+ax.plot(t,x)
+ax.set(xlabel='t (sec)', ylabel='Amplitude',
+       title='Time domain plot of x')
+ax.grid()
+ax.axis([0, 0.2, -2.5, 2.5])
+plt.show()
+
+# Υπολογίστε τον διακριτό μετασχηματισμό Fourier
+
+def nextpow2(i):  # επιστρέφει το n, τέτοιο ώστε 2^n >= L
+    n=0
+    while 2**n < i:
+        n+=1
+    return n
+
+N = 2^nextpow2(L)         # μήκος μετασχηματισμού Fourier.
+                          # η nextpow2 βρίσκει τη δύναμη του 2 που
+                          # είναι μεγαλύτερη ή ίση από το όρισμα L
+Fo=#συμπληρώστε#          # ανάλυση συχνότητας
+f=np.arange(0,N)*Fo       # διάνυσμα συχνοτήτων
+X=#συμπληρώστε#           # αριθμητικός υπολογισμός του διακριτού μετασχηματισμού Fourier (DFT) για Ν σημεία
+
+# Σχεδιάστε το σήμα στο πεδίο συχνότητας
+
+# Αφού το σήμα είναι πραγματικό μπορείτε να σχεδιάσετε μόνο τις θετικές συχνότητες
+fig, ax = plt.subplots()
+fig.set_size_inches(18.5, 10.5)
+ax.plot(f[np.arange(1,N)],abs(X[np.arange(1,N)]))
+ax.set(xlabel='f (Hz)', ylabel='Amplitude',
+       title='Frequency domain plot of x')
+ax.grid()
+plt.show()
+
+f=f-Fs/2                           # ολίσθηση συχνοτήτων προς τα αριστερά κατά –Fs/2
+X=np.fft.fftshift(X)               # ολίσθηση της μηδενικής συχνότητας στο κέντρο του φάσματος
+fig, ax = plt.subplots()
+fig.set_size_inches(18.5, 12)
+ax.plot(f,abs(X))
+ax.set(xlabel='f (Hz)', ylabel='Amplitude',
+       title='Two sided spectrum of x')
+ax.grid()
+plt.show()
+
+# Υπολογίστε την ισχύ
+
+power=np.multiply(X,np.conj(X))/N/L    # υπολογισμός πυκνότητας ισχύος
+fig, ax = plt.subplots()
+fig.set_size_inches(18.5, 12)
+ax.plot(f,power)
+ax.set(xlabel='Frequency (Hz)', ylabel='Power',
+       title='Periodogram')
+ax.grid()
+plt.show()
+------------------
+
+[0;36m  File [0;32m"<ipython-input-19-5bcbea5b00f1>"[0;36m, line [0;32m3[0m
+[0;31m    Ts=#συμπληρώστε#           # περίοδος δειγματοληψίας[0m
+[0m       ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+
+SyntaxError: invalid syntax (<ipython-input-19-5bcbea5b00f1>, line 3)
+
